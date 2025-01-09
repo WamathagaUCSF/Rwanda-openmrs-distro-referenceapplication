@@ -1,0 +1,354 @@
+{
+    "name": "Auto IPD GBV form 2.0",
+    "description": "Auto IPD GBV form",
+    "version": "2.0",
+    "published": false,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "GBV encounter",
+    "referencedForms": [],
+    "uuid": "c40f5723-3c8a-4fc4-9395-e5c9b36a0e76",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**Use this form to:** Document Gender based violence type and interventions"
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Gender Based Violence",
+        "sections": [
+          {
+            "label": "GBV",
+            "isExpanded": true,
+            "questions": [
+              {
+                "label": "Relationship With The Aggressor",
+                "type": "obs",
+                "id": "relationship_with_the_aggressor",
+                "questionOptions": {
+                  "concept": "b5bf1081-0b67-49e7-8f11-62479e3f112f",
+                  "rendering": "select",
+                  "answers": [
+                    {
+                      "concept": "3cd743f8-26fe-102b-80cb-0017a47871b2",
+                      "label": "None"
+                    },
+                    {
+                      "concept": "3cee77da-26fe-102b-80cb-0017a47871b2",
+                      "label": "Partner Or Spouse"
+                    },
+                    {
+                      "concept": "3cde7c90-26fe-102b-80cb-0017a47871b2",
+                      "label": "Guardian Relationship To Child"
+                    },
+                    {
+                      "concept": "3ce18a70-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sibling"
+                    },
+                    {
+                      "concept": "3ce18bec-26fe-102b-80cb-0017a47871b2",
+                      "label": "Other Relative"
+                    },
+                    {
+                      "concept": "3ce185ca-26fe-102b-80cb-0017a47871b2",
+                      "label": "Mother"
+                    },
+                    {
+                      "concept": "3ce18444-26fe-102b-80cb-0017a47871b2",
+                      "label": "Father"
+                    },
+                    {
+                      "concept": "3ce18746-26fe-102b-80cb-0017a47871b2",
+                      "label": "Brother"
+                    },
+                    {
+                      "concept": "3ce188f4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sister"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Date Of Aggression",
+                "type": "obs",
+                "id": "date_of_aggression_(gbv)",
+                "questionOptions": {
+                  "concept": "c1a7df03-60f5-41b8-acd1-a9c1cac7a00b",
+                  "rendering": "date"
+                },
+                "validators": [
+                  {
+                    "type": "date",
+                    "allowFutureDates": "false"
+                  },
+                  {
+                    "type": "js_expression",
+                    "failsWhenExpression": "myValue < useFieldValue('encounterDatetime')",
+                    "message": "Cannot be after the encounter date"
+                  }
+                ]
+              },
+              {
+                "label": "Lieu De L'agression",
+                "type": "encounterLocation",
+                "id": "clinic_location_other",
+                "questionOptions": {
+                  "concept": "eec8df99-d1a9-4c50-ab9d-60a103b61788",
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "label": "Names Of Referring Person/institution",
+                "type": "obs",
+                "id": "name_of_referring_person_in_gbv_department",
+                "questionOptions": {
+                  "concept": "9d68f990-8fae-4446-95fa-0db68a61fba4",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Violence Type (case Details)",
+                "type": "obs",
+                "id": "violence_type_",
+                "questionOptions": {
+                  "concept": "8d3c2403-fc29-40e5-ad42-f7624feb3824",
+                  "rendering": "radio",
+                  "answers": [
+                    {
+                      "concept": "9d8597d9-f275-4c8e-b1a0-d3d94793b19b",
+                      "label": "Child Abuse Center"
+                    },
+                    {
+                      "concept": "565babf3-8b8d-4c36-8cc7-d09b833ef48e",
+                      "label": "Domestic Violence "
+                    },
+                    {
+                      "concept": "c20c7e06-2bee-4bfe-8ff7-fe20449080ba",
+                      "label": "Economical Violence"
+                    },
+                    {
+                      "concept": "b2c6ffcb-a7fd-469b-ba44-1ffbdf1fcb56",
+                      "label": "Physical Violence"
+                    },
+                    {
+                      "concept": "1d7bb92b-7390-4f68-8130-c25bd481f1dc",
+                      "label": "Psychological Violence"
+                    },
+                    {
+                      "concept": "88fdbb75-9b83-4322-abc7-d97600076f53",
+                      "label": "Sexual violence"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Chirurgicaux",
+                "type": "obs",
+                "id": "surgical_antecedents_v2",
+                "questionOptions": {
+                  "concept": "d0256b30-56d4-497e-9f91-c6f6f7673fe6",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Psychiatriques",
+                "type": "obs",
+                "id": "psychiatric_history_v2",
+                "questionOptions": {
+                  "concept": "acabf02b-a514-419d-af95-76217d1dd97d",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Date Des Dernieres Règles (ddr)",
+                "type": "obs",
+                "id": "date_of_last_menstrual_period",
+                "questionOptions": {
+                  "concept": "3cd653c6-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "date"
+                },
+                "validators": [
+                  {
+                    "type": "date",
+                    "allowFutureDates": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Duree Habituelle Du Cycle",
+                "type": "obs",
+                "id": "duree_habituelle_du_cycle",
+                "questionOptions": {
+                  "concept": "4d4fc8e0-26ff-485c-a927-9f083f71d8cd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Utilisation De La Contraception",
+                "type": "obs",
+                "id": "use_of_contraception",
+                "questionOptions": {
+                  "concept": "76f21f51-05ce-4c3e-877f-948c6b81592c",
+                  "rendering": "radio",
+                  "answers": [
+                    {
+                      "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                      "label": "N0"
+                    },
+                    {
+                      "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                      "label": "Yes"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Laquelle",
+                "type": "obs",
+                "id": "other_contraception_method_used",
+                "questionOptions": {
+                  "concept": "d74d667c-dd62-474e-a2ad-ca142a029075",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Autres",
+                "type": "obs",
+                "id": "autres_antecedents_gynecologiques_et_obstetricaux",
+                "questionOptions": {
+                  "concept": "a9bee0e9-eef7-496b-8ed7-e32f74d67cb5",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Allergies Medicamenteuses",
+                "type": "obs",
+                "id": "allergy_comment",
+                "questionOptions": {
+                  "concept": "38b0118c-1cf4-40a9-a508-15c48d9586ac",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Nombre De Partenaires Sexuels (dans La Vie)",
+                "type": "obs",
+                "id": "number_of_lifetime_sexual_partners",
+                "questionOptions": {
+                  "concept": "3cdca69a-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sexe Du/des Partenaires (dans La Vie)",
+                "type": "obs",
+                "id": "sex_of_partner(s)",
+                "questionOptions": {
+                  "concept": "4f6db897-3ceb-43be-a367-a7957dae4091",
+                  "rendering": "radio",
+                  "answers": [
+                    {
+                      "concept": "3ce84b1c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Male"
+                    },
+                    {
+                      "concept": "cde80290-207b-4b0b-9ac3-bcd7a30a5554",
+                      "label": "Male and Female"
+                    },
+                    {
+                      "concept": "3ce84c8e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Female"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Date De La Derniere Relation Sexuelle Volontaire",
+                "type": "obs",
+                "id": "last_date_of_volontary_sexual_relation",
+                "questionOptions": {
+                  "concept": "6423a54b-b3b8-4d2a-9422-81669badaef3",
+                  "rendering": "date"
+                },
+                "validators": [
+                  {
+                    "type": "date",
+                    "allowFutureDates": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Lies Aux Ists",
+                "type": "obs",
+                "id": "past_sexual_history_related_to_stis",
+                "questionOptions": {
+                  "concept": "ac9923ed-b077-4cb1-a8a0-ba628476cbd1",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Lies A La Violence",
+                "type": "obs",
+                "id": "history_related_to_violence",
+                "questionOptions": {
+                  "concept": "fcfe8870-41dd-45b3-bf4a-398bffe9634e",
+                  "rendering": "radio",
+                  "answers": [
+                    {
+                      "concept": "70df7e11-8662-4103-9d42-d3281dfab03a",
+                      "label": "Other violences"
+                    },
+                    {
+                      "concept": "c64a9be3-966f-4f0e-8be1-81cb12e2ccd8",
+                      "label": "Gender based violence"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "83409460-3e78-420a-8e42-233ae4a02edb"
+  }

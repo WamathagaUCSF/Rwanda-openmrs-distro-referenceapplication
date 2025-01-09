@@ -1,0 +1,414 @@
+{
+  "name": "Nursing Assessment 2.0",
+  "description": "Nursing assessment",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "processor": "EncounterFormProcessor",
+  "encounter": "Findings",
+  "referencedForms": [],
+  "uuid": "fc98b6cb-3ec4-47cc-a063-d4aad73601b7",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Particulars",
+          "isExpanded": true,
+          "questions": [
+            {
+              "value": [
+                "**Use this form to:** Document a nusring history and assessment"
+              ],
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "heading"
+            },
+            {
+              "label": "Encounter & Datetime",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "datetime"
+              },
+              "required": "true",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "Date the encounter took place"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Health History",
+      "sections": [
+        {
+          "label": "Present illness",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Cheif Complaints",
+              "type": "obs",
+              "id": "current_complaints_or_symptoms",
+              "questionOptions": {
+                "concept": "3ce2b170-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "History of Present illness",
+              "type": "obs",
+              "id": "history_of_the_present_illness",
+              "questionOptions": {
+                "concept": "24aa74e0-a281-4031-8919-63f3eaf3a729",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Past medical",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Immunization (VAT)",
+              "type": "obs",
+              "id": "immunization_(vat)",
+              "questionOptions": {
+                "concept": "4e3b9dc8-2b11-4a05-972f-f9710471c5d0",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Any Allergie?",
+              "type": "obs",
+              "id": "no_allergies",
+              "questionOptions": {
+                "concept": "3cdcdf84-26fe-102b-80cb-0017a47871b2",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                    "label": "Yes"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Allergies note",
+              "type": "obs",
+              "id": "allergy_comment",
+              "questionOptions": {
+                "concept": "38b0118c-1cf4-40a9-a508-15c48d9586ac",
+                "rendering": "textarea"
+              },
+              "hide": {
+                "hideWhenExpression": "no_allergies !== '3cd6f600-26fe-102b-80cb-0017a47871b2'"
+              }
+            },
+            {
+              "label": "Gyneco-Obstetrical History",
+              "type": "obs",
+              "id": "obstetrical_complication_other",
+              "questionOptions": {
+                "concept": "e03d0a07-4c9b-4c6a-88b2-5548a99f75da",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Lifestyle",
+              "type": "obs",
+              "id": "lifestyle",
+              "questionOptions": {
+                "concept": "a949e068-dae9-410f-8608-11a61c391898",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Psychosocial status",
+              "type": "obs",
+              "id": "psychiatric_history_v2",
+              "questionOptions": {
+                "concept": "acabf02b-a514-419d-af95-76217d1dd97d",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Nutritional history",
+              "type": "obs",
+              "id": "nutritional_history",
+              "questionOptions": {
+                "concept": "ce576655-89ce-4972-9822-af177e0fce90",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Family History",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Current Health Status:",
+              "type": "obs",
+              "id": "family_health_status",
+              "questionOptions": {
+                "concept": "66b3fd76-6bda-472e-a2df-a9ad39aae42e",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Medications:",
+              "type": "obs",
+              "id": "drug_prescribed",
+              "questionOptions": {
+                "concept": "c28bc221-065e-4716-a9b0-b959239bc102",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Physical Examination",
+      "sections": [
+        {
+          "label": "Systemic Review",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "General aspect / Aspect general",
+              "type": "obs",
+              "id": "physical_examination",
+              "questionOptions": {
+                "concept": "3cd9ae0e-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Pulmonary System",
+              "type": "obs",
+              "id": "pulmonary_system",
+              "questionOptions": {
+                "concept": "3ce15384-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Cardiovascular System",
+              "type": "obs",
+              "id": "cardiovascular_system",
+              "questionOptions": {
+                "concept": "3ce1567c-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Abdominal System",
+              "type": "obs",
+              "id": "abdominal_system",
+              "questionOptions": {
+                "concept": "3ce157ee-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Neurologic System",
+              "type": "obs",
+              "id": "neurologic_system",
+              "questionOptions": {
+                "concept": "3ce1596a-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Musculoskeletal System",
+              "type": "obs",
+              "id": "musculoskeletal_system",
+              "questionOptions": {
+                "concept": "3ce15c58-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Urogenital System",
+              "type": "obs",
+              "id": "urogenital_system",
+              "questionOptions": {
+                "concept": "3ce15f46-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Skin,Growths,Ganglions",
+              "type": "obs",
+              "id": "skin,_growths,_ganglions",
+              "questionOptions": {
+                "concept": "3ce1625c-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Psychomotor System",
+              "type": "obs",
+              "id": "psychomotor_system",
+              "questionOptions": {
+                "concept": "00727a2a-821a-4d21-af08-581e04b7b279",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Head Ear Eye Nose Throat",
+              "type": "obs",
+              "id": "hd",
+              "questionOptions": {
+                "concept": "d2aa91b1-3b54-4c9b-b70b-99451d486395",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Neck",
+              "type": "obs",
+              "id": "neck",
+              "questionOptions": {
+                "concept": "150fb48b-574a-43c3-afb7-fcff6f06170c",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Nursing Assessment",
+      "sections": [
+        {
+          "label": "Nursing Action Plan",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Nurse diagnosis",
+              "type": "obs",
+              "id": "nursing_diagnosis",
+              "questionOptions": {
+                "concept": "1fe24902-2b62-4461-b2e7-a0fb76fc2970",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Nurse conclusion of Exams",
+              "type": "obs",
+              "id": "comments_at_conclusion_of_examination",
+              "questionOptions": {
+                "concept": "3cdc5938-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Danger Signs",
+              "type": "obs",
+              "id": "sign_de_danger",
+              "questionOptions": {
+                "concept": "9b1570e8-ea9e-4420-b0cc-708761f4c2b8",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Intervention",
+              "type": "obs",
+              "id": "nursing_intervention",
+              "questionOptions": {
+                "concept": "96cd0d39-6a27-4691-b2d4-5d33a092c16c",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Physician",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Call Physician Date",
+              "type": "obs",
+              "id": "call_physician_date",
+              "questionOptions": {
+                "concept": "a76690e0-00ac-42df-8c53-3754c87050b4",
+                "rendering": "datetime"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                },
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < useFieldValue('encounterDatetime')",
+                  "message": "Cannot be before the encounter date"
+                }
+              ]
+            },
+            {
+              "label": "Physician Response Date",
+              "type": "obs",
+              "id": "physician_response_date",
+              "questionOptions": {
+                "concept": "fad1b3bd-1e2b-4c67-8520-e7421d6d854b",
+                "rendering": "datetime"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "true"
+                },
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < useFieldValue('encounterDatetime')",
+                  "message": "Cannot be before the encounter date"
+                }
+              ],
+              "hide": {
+                "hideWhenExpression": "isEmpty(call_physician_date)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "76162246-15d8-43b0-9666-5884ad1e2be4"
+}

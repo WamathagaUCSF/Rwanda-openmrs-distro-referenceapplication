@@ -1,0 +1,412 @@
+{
+  "name": "Auto Ophthalmology Acts 2.0",
+  "description": "auto Ophthalmology acts",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "processor": "EncounterFormProcessor",
+  "encounter": "Ophthalmology acts encounter",
+  "referencedForms": [],
+  "uuid": "73fc3474-7ed2-4573-8491-4af95392330e",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Particulars",
+          "isExpanded": true,
+          "questions": [
+            {
+              "value": [
+                "**Use this form to:** Document an Ophthalmology consultation "
+              ],
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "heading"
+            },
+            {
+              "label": "Encounter & Datetime",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "datetime"
+              },
+              "required": "true",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "Date the encounter took place"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Ophtalmologie",
+      "sections": [
+        {
+          "label": "Oeil",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": " Acuité visuelle Oeil Droit",
+              "type": "obs",
+              "required": false,
+              "id": "AcuitéVisuelleOeilDroit",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "a838e4b3-1e27-4b42-a118-fcc6f8fc4526"
+              },
+              "validators": []
+            },
+            {
+              "label": "Acuité visuelle Oeil Gauche",
+              "type": "obs",
+              "required": false,
+              "id": "acuitéVisuelleOeilGauche",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "ddf867f1-7e98-4bf6-a52e-a3dd179c8d5a"
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Examen Bio-Microscopique AV OD",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Examen Bio-Microscopique AV OD",
+              "type": "obsGroup",
+              "required": false,
+              "id": "ExamenBioMicroscopiqueAVOD",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "16d2cc60-9b46-4ba4-94d8-01df5ce4fa5b"
+              },
+              "questions": [
+                {
+                  "label": "Paupière OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "7dd8bdbb-8b79-42e0-95e3-c69761dc3b51"
+                  },
+                  "id": "paupière"
+                },
+                {
+                  "label": "Conjoctive OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "b5d85e29-cfd0-4d79-a067-80c16dc83d65"
+                  },
+                  "id": "conjoctive"
+                },
+                {
+                  "label": "Chambre anterièure OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "e34689e3-6b6c-4af6-a7c7-5fde2ad67f15"
+                  },
+                  "id": "chambreAnterièure"
+                },
+                {
+                  "label": "Cornée OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "db986b47-a20e-439c-ae88-20dcd5a77c08"
+                  },
+                  "id": "cornée"
+                },
+                {
+                  "label": "Cristallin OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "64ec929e-662e-4330-a872-03591fb9b4a6"
+                  },
+                  "id": "cristallin"
+                },
+                {
+                  "label": "Fond d'oeil OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "9350d545-827a-4156-a515-051586b367c1"
+                  },
+                  "id": "fonddoeil"
+                },
+                {
+                  "label": "Iris OD",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "8ed3374f-a500-4f93-92f8-c9887d2dd3df"
+                  },
+                  "id": "iris"
+                }
+              ],
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Examen Bio-Microscopique AV OG",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Examen Bio-Microscopique AV OG",
+              "type": "obsGroup",
+              "required": false,
+              "id": "ExamenBioMicroscopiqueAVOG",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "16d2cc60-9b46-4ba4-94d8-01df5ce4fa5b"
+              },
+              "questions": [
+                {
+                  "label": " Paupière OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "7dd8bdbb-8b79-42e0-95e3-c69761dc3b51"
+                  },
+                  "id": " paupièreOG"
+                },
+                {
+                  "label": "Conjoctive OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "b5d85e29-cfd0-4d79-a067-80c16dc83d65"
+                  },
+                  "id": "conjoctiveOG"
+                },
+                {
+                  "label": "Chambre anterièure OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "e34689e3-6b6c-4af6-a7c7-5fde2ad67f15"
+                  },
+                  "id": "chambreAnterièureOG"
+                },
+                {
+                  "label": "Cornée OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "db986b47-a20e-439c-ae88-20dcd5a77c08"
+                  },
+                  "id": "cornéeOG"
+                },
+                {
+                  "label": "Cristallin OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "64ec929e-662e-4330-a872-03591fb9b4a6"
+                  },
+                  "id": "cristallinOG"
+                },
+                {
+                  "label": "Fond d'oeil OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "9350d545-827a-4156-a515-051586b367c1"
+                  },
+                  "id": "fonddoeilOG"
+                },
+                {
+                  "label": "Iris OG",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "8ed3374f-a500-4f93-92f8-c9887d2dd3df"
+                  },
+                  "id": "irisOG"
+                }
+              ],
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Examen Refraction - Test De Vision De Loin",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Test De Vision De Loin",
+              "type": "obsGroup",
+              "required": false,
+              "id": "testDeVisionDeLoin",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "98f2afd3-ab5a-4f3a-9954-712c1e072c79"
+              },
+              "questions": [
+                {
+                  "label": "Axe visuel de l'oeil droit",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "57828f2f-56f9-429a-93d8-42abce347119"
+                  },
+                  "id": "odAxe"
+                },
+                {
+                  "label": "Axe visuel de l'oeil gauche",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "93eeab43-88b9-4437-9740-46884a21da84"
+                  },
+                  "id": "ogAxe"
+                },
+                {
+                  "label": "Test cylindrique de l'œil droit",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "d899a77d-4b9a-4d7c-91e9-e4b9a1db2cc3"
+                  },
+                  "id": "odCyl"
+                },
+                {
+                  "label": "Test cylindrique de l'œil gauche",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "b7048443-541e-4622-99d8-9a6d6c53216f"
+                  },
+                  "id": "ogCyl"
+                },
+                {
+                  "label": "Test sphérique de l'œil droit",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "941a7754-d43a-4b33-8ab8-9c49a76f470f"
+                  },
+                  "id": "odSph"
+                },
+                {
+                  "label": "Test sphérique de l'œil gauche",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "a7bdea70-acca-45b1-a554-d5d0512194da"
+                  },
+                  "id": "ogSph"
+                }
+              ],
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Examen Refraction - Test De Vision de pres",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Test De Vision De Près",
+              "type": "obsGroup",
+              "required": false,
+              "id": "testDeVisionDePres",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "b69b7995-5d5d-4e0f-b9ea-7caeb9470ad8"
+              },
+              "questions": [
+                {
+                  "label": "Axe visuel de l'oeil droit",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "57828f2f-56f9-429a-93d8-42abce347119"
+                  },
+                  "id": "odAxeP"
+                },
+                {
+                  "label": "Axe visuel de l'oeil gauche",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "93eeab43-88b9-4437-9740-46884a21da84"
+                  },
+                  "id": "ogAxeP"
+                },
+                {
+                  "label": "Test cylindrique de l'œil droit",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "d899a77d-4b9a-4d7c-91e9-e4b9a1db2cc3"
+                  },
+                  "id": "odCylP"
+                },
+                {
+                  "label": "Test cylindrique de l'œil gauche",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "b7048443-541e-4622-99d8-9a6d6c53216f"
+                  },
+                  "id": "ogCylP"
+                },
+                {
+                  "label": "Test sphérique de l'œil droit",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "941a7754-d43a-4b33-8ab8-9c49a76f470f"
+                  },
+                  "id": "odSphP"
+                },
+                {
+                  "label": "Test sphérique de l'œil gauche",
+                  "type": "obs",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "a7bdea70-acca-45b1-a554-d5d0512194da"
+                  },
+                  "id": "ogSphP"
+                }
+              ],
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "002e0b8f-6b7d-4f0c-8375-fd77b17061e8"
+}

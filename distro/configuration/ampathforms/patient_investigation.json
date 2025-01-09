@@ -1,0 +1,1349 @@
+{
+    "name": "Patient Investigation Form 2.0",
+    "description": "patient investigation form",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "investigation encounter",
+    "referencedForms": [],
+    "uuid": "90ef5b44-e4e7-482f-a7a3-d497170bc802",
+    "pages": [
+      {
+        "label": "Hematology",
+        "sections": [
+          {
+            "label": "Complete Blood Count",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "White Blood Cells (WBC) (10^3/uL)",
+                "type": "obs",
+                "required": false,
+                "id": "wBC",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd2a906-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "WHITE BLOOD CELLS"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "678"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "WHITE BLOOD CELLS"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "678"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Red Blood Cells (RBC) (10^6/uL)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryRedBloodCells",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd2ab40-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "23859-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "679"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "681"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923240"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "682"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "679"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "14089001"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Platelets (10^3/mL)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryPlatelets",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd3d038-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "687330"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "729"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "729"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "6348"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "26515-7"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "61928009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "651"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "729"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Neutrophils (%)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryNeutrophilsMicroscopic",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd6a592-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "3060"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1060713"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "30630007"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1336"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1336"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Lymphocytes (%) - microscopic exam",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryLymphocytesMicroscopic",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd6a402-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1338"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1338"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1064629"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271036002"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Eosinophils (%)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryeosinophilscopic",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd6a8b2-26fe-102b-80cb-0017a47871b2",
+                  "answers": []
+                }
+              },
+              {
+                "label": "Basophils (%)",
+                "type": "obs",
+                "required": false,
+                "id": "basophils",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd6aa38-26fe-102b-80cb-0017a47871b2",
+                  "answers": []
+                }
+              },
+              {
+                "label": "Monocytes (%)",
+                "type": "obs",
+                "required": false,
+                "id": "monocytes",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd6a722-26fe-102b-80cb-0017a47871b2",
+                  "answers": []
+                }
+              },
+              {
+                "label": "MCV (fL) - Mean Corpuscular Volume",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryMCV",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd4a0a8-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "851"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "30929612"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "787-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "104133003"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "851"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "MCH (pg) - Mean Corpuscular Hemoglobin",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryMCH",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd69f48-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1074253"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1018"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1018"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "54706004"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "28539-5"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "MCHC (g/dL) - Mean Cell Hemoglobin Concentration",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryMCHC",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd69dc2-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1017"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "28540-3"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "37254006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1017"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1068576"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Hematocrit (%)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryHematocrit",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd69a98-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1015"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1015"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "2464"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "365616005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "935674"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "20570-8"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Haemoglobin (g/dL)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryHaemoglobin",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3ccc7158-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "930136"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED CT",
+                      "value": "38082009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH Malawi",
+                      "value": "7982"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "21"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "21"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "301"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "441689006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "648"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "718-7"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Red Cell Distribution Width (%)",
+                "type": "obs",
+                "required": false,
+                "id": "rbcw",
+                "questionOptions": {
+                  "disallowDecimals": false,
+                  "rendering": "number",
+                  "concept": "3cd69c28-26fe-102b-80cb-0017a47871b2",
+                  "answers": []
+                }
+              }
+            ]
+          },
+          {
+            "label": "HIV Testing",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "HIV Test",
+                "type": "obs",
+                "required": false,
+                "id": "hivTest",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "3ce17cec-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "RESULT OF HIV TEST"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "RWCS",
+                      "value": "2169"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "RESULT OF HIV TEST"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "2169"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "2169"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "org.openmrs.module.mdrtb",
+                      "value": "RESULT OF HIV TEST"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "3cd3a7a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "POSITIVE"
+                    },
+                    {
+                      "concept": "3cd28732-26fe-102b-80cb-0017a47871b2",
+                      "label": "NEGATIVE"
+                    },
+                    {
+                      "concept": "3cd774d6-26fe-102b-80cb-0017a47871b2",
+                      "label": "INDETERMINATE"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Chemistry",
+        "sections": [
+          {
+            "label": "Chemistry Results",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Alkaline Phosphatase (U/L)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryAlkalinePhosphatase",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd42f4c-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "850"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271234008"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "6768-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "785"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "686977"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "785"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED CT",
+                      "value": "57056007"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Amylase (IU/L)",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryAmylase",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "e3cf2e69-c5b5-49e7-819e-15daaf41d2f1",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "601338"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "1798-8"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1299"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "31004384"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "3054"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "64435009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1299"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "BUN (mmol/L) - Blood Urea Nitrogen",
+                "type": "obs",
+                "required": false,
+                "id": "ManualEntryBUN",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd4aa12-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "2555"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "857"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14937-7"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "72341003"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "857"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923501"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Blood Glucose (mg/dL)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntryFastingBloodGlucosemgdl",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd4e194-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "1558-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "932395"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "160912"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271062006"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Serum Albumin (g/dL)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumAlbumin",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd49bf8-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "848"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "5103"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "1751-7"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "848"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "104485008"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Calcium (mg/dL)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumCalcium",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "01765cd1-8fd6-4783-b053-190b1f6ed5bd",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "3056"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "2324"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "17861-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "601371"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "159497"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271240001"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Potassium (mmol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumPotassium",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd76ce8-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271236005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1133"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Sodium (mmol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumSodium",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd76b58-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "2951-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1132"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "1132"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "5110"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1132"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "104934005"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Creatinine (umol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumCreatinine",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd4374e-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED CT",
+                      "value": "113075003"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14682-9"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "790"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "790"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Total Protein (g/dL)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntryTotalProtein",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd3bd5a-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "717"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "717"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "270992008"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "34405511"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Total Bilirubin (umol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntryTotalBilirubin",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd278fa-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "655"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "166610007"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "35327185"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14631-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "655"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Glutamic-Oxaloacetic Transaminase (IU/L) aka SGPT, AST",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumGlutamicOxaloaceticTransaminase",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd275d0-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "653"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "48136-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923373"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "653"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "250641004"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Alkaline Phosphatase, ALP (U/L) ",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntryAlkalinePhosphastase",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd42f4c-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "850"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271234008"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "6768-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "785"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "686977"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "785"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED CT",
+                      "value": "57056007"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Uric Acid (mg/dL)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumUricAcid",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "d6e20676-e800-4f26-a8b2-96a2127201dd",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "275740009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "159825"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "AMPATH",
+                      "value": "6134"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "687075"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "LOINC",
+                      "value": "3084-1"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Total Cholesterol (mmol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntryTotalCholesterol",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd68c7e-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14647-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923300"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "121868005"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Triglycerides (mmol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntryTriglycerides",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "3cd69138-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "30953289"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1009"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14927-8"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "14740000"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": "Serum Carbon Dioxide CO2 (mmol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "manualEntrySerumCarbonDioxide",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd77012-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923383"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "30933589"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "1963-8"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "1626"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271239003"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1135"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1135"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "602824"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Serum Chloride (mmol/L)",
+                "type": "obs",
+                "required": false,
+                "id": "serumchloride",
+                "questionOptions": {
+                  "disallowDecimals": true,
+                  "rendering": "number",
+                  "concept": "3cd76e82-26fe-102b-80cb-0017a47871b2",
+                  "answers": []
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Imaging",
+        "sections": [
+          {
+            "label": "Imaging",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Electroencephalogram",
+                "type": "obs",
+                "required": false,
+                "id": "electroencephalogram",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "356d0244-2ce4-4e7e-a207-63e537de72d5",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "6842"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "Electroencephalogram"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Head CT/MRI",
+                "type": "obs",
+                "required": false,
+                "id": "headCtMri",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "b533e9e1-aba0-4427-882d-5b78a8c4670b"
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Other",
+        "sections": [
+          {
+            "label": "Other",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Other tests or procedures",
+                "type": "obs",
+                "required": false,
+                "id": "otherTestsOrProcedures",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "66ad3230-59b2-4232-821e-a9ae86819e03"
+                },
+                "validators": []
+              },
+              {
+                "label": "Other tests or procedures Results",
+                "type": "obs",
+                "required": false,
+                "id": "otherTestsOrProceduresResults",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "b6aab915-428d-49ca-aa19-fdf26d3d7683"
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "f3f15319-4d43-4720-8baf-499ece4fcf97"
+  }

@@ -1,0 +1,116 @@
+{
+  "name": "Auto Patient Education 2.0",
+  "description": "Auto Patient Education",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "processor": "EncounterFormProcessor",
+  "encounter": "Patient Education",
+  "referencedForms": [],
+  "uuid": "539b2d35-5a21-4738-ad54-bd190ed7b105",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Particulars",
+          "isExpanded": true,
+          "questions": [
+            {
+              "value": [
+                "**Use this form to:** Document patient educational needs"
+              ],
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "heading"
+            },
+            {
+              "label": "Encounter & Datetime",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "datetime"
+              },
+              "required": "true",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "Date the encounter took place"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Patient Education",
+      "sections": [
+        {
+          "label": "Information provided",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Identified Health Education needs",
+              "type": "obs",
+              "id": "past_medicalNeeds",
+              "questionOptions": {
+                "concept": "e8c8e2d7-2f28-4650-8759-ff0745f7db3d",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Education subject",
+              "type": "obs",
+              "id": "past_medicalSubject",
+              "questionOptions": {
+                "concept": "a0c245fb-a639-4288-8919-cfcf051398ec",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Information received by the patient",
+              "type": "obs",
+              "id": "past_medicalInfo",
+              "questionOptions": {
+                "concept": "7ed7e70e-b98b-4c15-b12b-204bc792452c",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Information received by the next kin",
+              "type": "obs",
+              "id": "past_medicalNOK",
+              "questionOptions": {
+                "concept": "712a3fd6-c315-49bf-b4a3-b0eb8957ddfd",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "fa8b9e67-3cad-4c52-afd3-95d808835bc8"
+}

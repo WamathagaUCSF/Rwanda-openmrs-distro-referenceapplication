@@ -1,0 +1,1563 @@
+{
+  "name": "General Followup 2.0",
+  "description": "General Followup",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "processor": "EncounterFormProcessor",
+  "encounter": "General Followup",
+  "referencedForms": [],
+  "uuid": "91bfdd8c-ff0e-4dd7-89bc-f080169f0742",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Particulars",
+          "isExpanded": true,
+          "questions": [
+            {
+              "value": [
+                "**Use this form to:** Document patient educational needs"
+              ],
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "heading"
+            },
+            {
+              "label": "Encounter & Datetime",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "datetime"
+              },
+              "required": "true",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "Date the encounter took place"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "General OPD",
+      "sections": [
+        {
+          "label": "Followup",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Visite programmée",
+              "type": "obs",
+              "id": "scheduled_visit",
+              "questionOptions": {
+                "concept": "3cd91070-26fe-102b-80cb-0017a47871b2",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "3ce22110-26fe-102b-80cb-0017a47871b2",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "3ce22c50-26fe-102b-80cb-0017a47871b2",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Complaint Diagnosis",
+              "type": "obs",
+              "id": "outpatient_diagnosis",
+              "questionOptions": {
+                "concept": "f0230f4a-1b20-4a47-bce9-c5a9c01367ec",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "3cd9c484-26fe-102b-80cb-0017a47871b2",
+                    "label": "ACUTE PNEUMONIA PRESUMED BACTERIAL"
+                  },
+                  {
+                    "concept": "3cce4fb4-26fe-102b-80cb-0017a47871b2",
+                    "label": "FOREIGN BODY"
+                  },
+                  {
+                    "concept": "3cd82084-26fe-102b-80cb-0017a47871b2",
+                    "label": "RECTOVAGINAL FISTULA"
+                  },
+                  {
+                    "concept": "3cccecdc-26fe-102b-80cb-0017a47871b2",
+                    "label": "TOXICITY, DRUG"
+                  },
+                  {
+                    "concept": "3ccc9a8e-26fe-102b-80cb-0017a47871b2",
+                    "label": "POSTPARTUM HEMORRHAGE"
+                  },
+                  {
+                    "concept": "3cd35c5c-26fe-102b-80cb-0017a47871b2",
+                    "label": "TRICHOMONAS"
+                  },
+                  {
+                    "concept": "3ce85cba-26fe-102b-80cb-0017a47871b2",
+                    "label": "OTHER PSYCHIATRIC OR NEUROLOGICAL ADVERSE EFFECT"
+                  },
+                  {
+                    "concept": "3cd50dfe-26fe-102b-80cb-0017a47871b2",
+                    "label": "OTHER AND UNSPECIFIED CONVULSIONS (retired)"
+                  },
+                  {
+                    "concept": "6fecf5ff-bc28-414c-a75e-8a4d560c5a9b",
+                    "label": "Eye problem other"
+                  },
+                  {
+                    "concept": "3ccd3c82-26fe-102b-80cb-0017a47871b2",
+                    "label": "LABOR PAIN, FALSE (retired)"
+                  },
+                  {
+                    "concept": "bc82362d-cc86-11e8-a985-27f24ca34d9a",
+                    "label": "ANAPHYLAXIS"
+                  },
+                  {
+                    "concept": "3ccd1888-26fe-102b-80cb-0017a47871b2",
+                    "label": "RHINITIS, ALLERGIC (retired)"
+                  },
+                  {
+                    "concept": "3cd9d65e-26fe-102b-80cb-0017a47871b2",
+                    "label": "ENCEPHALOPATHY PRESUMED DUE TO HIV"
+                  },
+                  {
+                    "concept": "3ce5bfa0-26fe-102b-80cb-0017a47871b2",
+                    "label": "PAPULAR PRURITIC ERUPTIONS"
+                  },
+                  {
+                    "concept": "7fad9e00-042f-4720-bdec-abfb47d5d094",
+                    "label": "Eye problem Trauma"
+                  },
+                  {
+                    "concept": "3cccfac4-26fe-102b-80cb-0017a47871b2",
+                    "label": "LACERATION"
+                  },
+                  {
+                    "concept": "51681c89-6b10-4340-964c-098afbfa23d1",
+                    "label": "Malaria presumptive"
+                  },
+                  {
+                    "concept": "3cd4d262-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMOCYSTIC CARINII PNEUMONIA"
+                  },
+                  {
+                    "concept": "3ce5d01c-26fe-102b-80cb-0017a47871b2",
+                    "label": "INVASIVE CERVICAL CARCINOMA"
+                  },
+                  {
+                    "concept": "3ce98d06-26fe-102b-80cb-0017a47871b2",
+                    "label": "DEMENTIA"
+                  },
+                  {
+                    "concept": "3cd47984-26fe-102b-80cb-0017a47871b2",
+                    "label": "ORAL HAIRY LEUKOPLAKIA retired (retired)"
+                  },
+                  {
+                    "concept": "3cccf196-26fe-102b-80cb-0017a47871b2",
+                    "label": "AIDS (retired)"
+                  },
+                  {
+                    "concept": "3cdc346c-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMOPATHY"
+                  },
+                  {
+                    "concept": "3ccc9624-26fe-102b-80cb-0017a47871b2",
+                    "label": "PREGNANCY ECTOPIC"
+                  },
+                  {
+                    "concept": "3cccb7bc-26fe-102b-80cb-0017a47871b2",
+                    "label": "EYE INFECTIONS (retired)"
+                  },
+                  {
+                    "concept": "69e7c146-aeeb-4237-9a91-cbf4e8fc49b4",
+                    "label": "Skin Infection Fungal (mycoses) superficial "
+                  },
+                  {
+                    "concept": "3cccbef6-26fe-102b-80cb-0017a47871b2",
+                    "label": "DISEASE OF PUERPERIUM AND CHILDBIRTH (retired)"
+                  },
+                  {
+                    "concept": "3cd9ddc0-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONVULSIONS OR NEUROLOGICAL DEFICIT PRESUMED TOXOPLASMOSIS"
+                  },
+                  {
+                    "concept": "3cd55d36-26fe-102b-80cb-0017a47871b2",
+                    "label": "CEREBRAL PALSY"
+                  },
+                  {
+                    "concept": "4629805f-66b2-4e99-ad15-74734fba3d3b",
+                    "label": "Teeth and gum Infections"
+                  },
+                  {
+                    "concept": "3cd4e32e-26fe-102b-80cb-0017a47871b2",
+                    "label": "VITAMIN D DEFICIENCY"
+                  },
+                  {
+                    "concept": "1ebffdf1-74e3-464e-9f65-93b8a57133de",
+                    "label": "Genital ulcers v2"
+                  },
+                  {
+                    "concept": "3ccc8486-26fe-102b-80cb-0017a47871b2",
+                    "label": "MALARIA, SEVERE (retired)"
+                  },
+                  {
+                    "concept": "3ce6b1ee-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANXIETY DISORDER"
+                  },
+                  {
+                    "concept": "3ce8611a-26fe-102b-80cb-0017a47871b2",
+                    "label": "CHRONIC ISOSPORIASIS"
+                  },
+                  {
+                    "concept": "3cd80b44-26fe-102b-80cb-0017a47871b2",
+                    "label": "HUMAN PAPILLOMAVIRUS"
+                  },
+                  {
+                    "concept": "3cd4e7e8-26fe-102b-80cb-0017a47871b2",
+                    "label": "PERTUSSIS"
+                  },
+                  {
+                    "concept": "3cebab22-26fe-102b-80cb-0017a47871b2",
+                    "label": "ASYMPTOMATIC HIV INFECTION"
+                  },
+                  {
+                    "concept": "ea4ec122-6195-4506-8c74-c8e6dea7fa66",
+                    "label": "Bone and Joint disorder, other than fractures"
+                  },
+                  {
+                    "concept": "3cce6116-26fe-102b-80cb-0017a47871b2",
+                    "label": "SEXUALLY TRANSMITTED INFECTION"
+                  },
+                  {
+                    "concept": "3cd80928-26fe-102b-80cb-0017a47871b2",
+                    "label": "MOLLUSCUM CONTAGIOSUM"
+                  },
+                  {
+                    "concept": "3ce8f634-26fe-102b-80cb-0017a47871b2",
+                    "label": "PCP - OLD (retired)"
+                  },
+                  {
+                    "concept": "dec163d9-8c7c-44e3-822c-199feef0033b",
+                    "label": "SEPSIS "
+                  },
+                  {
+                    "concept": "3cd492a2-26fe-102b-80cb-0017a47871b2",
+                    "label": "FOLLICULITIS"
+                  },
+                  {
+                    "concept": "3cd48c44-26fe-102b-80cb-0017a47871b2",
+                    "label": "ACNE"
+                  },
+                  {
+                    "concept": "87b9e103-38bd-4414-98b4-7129faae651b",
+                    "label": "Eye problem Trachoma"
+                  },
+                  {
+                    "concept": "11e814ff-47a5-4868-964a-d2997f9ca02f",
+                    "label": "Eye problem Trichiasis"
+                  },
+                  {
+                    "concept": "3ce5cea0-26fe-102b-80cb-0017a47871b2",
+                    "label": "LYMPHOMA OR HIV-ASSOCIATED TUMORS"
+                  },
+                  {
+                    "concept": "3cd48dca-26fe-102b-80cb-0017a47871b2",
+                    "label": "THROMBOCYTOPENIA"
+                  },
+                  {
+                    "concept": "3cd507be-26fe-102b-80cb-0017a47871b2",
+                    "label": "UNSPECIFIED MALARIA (retired)"
+                  },
+                  {
+                    "concept": "3cd85716-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANEMIA, IRON DEFICIENCY"
+                  },
+                  {
+                    "concept": "1d71d824-c40d-4ab2-83f7-11ddc861eb30",
+                    "label": "Prolonged labor"
+                  },
+                  {
+                    "concept": "3ccc44ee-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANEMIA, HEMOLYSIS"
+                  },
+                  {
+                    "concept": "3ccea02c-26fe-102b-80cb-0017a47871b2",
+                    "label": "ROAD TRAFFIC ACCIDENT (retired)"
+                  },
+                  {
+                    "concept": "3cd0db44-26fe-102b-80cb-0017a47871b2",
+                    "label": "FUNGAL INFECTION SKIN (retired)"
+                  },
+                  {
+                    "concept": "3ccdf42e-26fe-102b-80cb-0017a47871b2",
+                    "label": "CERVICITIS"
+                  },
+                  {
+                    "concept": "3ce5c414-26fe-102b-80cb-0017a47871b2",
+                    "label": "PERSISTENT ORAL CANDIDIASIS"
+                  },
+                  {
+                    "concept": "3ccd05be-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONJUNCTIVITIS"
+                  },
+                  {
+                    "concept": "8187977d-cafb-4ac2-894b-29161016f6ca",
+                    "label": "Heart Disease Acute"
+                  },
+                  {
+                    "concept": "3ce5cb76-26fe-102b-80cb-0017a47871b2",
+                    "label": "DISSEMINATED NON-TUBERCULOSIS MYCOBACTERIAL INFECTION"
+                  },
+                  {
+                    "concept": "3cd4fa1c-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIARRHEA AND GASTROENTERITIS OF PRESUMED INFECTIOUS ORIGIN (retired)"
+                  },
+                  {
+                    "concept": "e5046364-627a-4cf2-8f1e-f6a128a6016b",
+                    "label": "Cardio vascular disease other"
+                  },
+                  {
+                    "concept": "3cce7548-26fe-102b-80cb-0017a47871b2",
+                    "label": "ABORTION, INCOMPLETE (retired)"
+                  },
+                  {
+                    "concept": "3ccc88f0-26fe-102b-80cb-0017a47871b2",
+                    "label": "MENSTRUAL DYSFUNCTION"
+                  },
+                  {
+                    "concept": "3cd80702-26fe-102b-80cb-0017a47871b2",
+                    "label": "VERRUCA PLANUS"
+                  },
+                  {
+                    "concept": "3ce8fdfa-26fe-102b-80cb-0017a47871b2",
+                    "label": "FAILURE TO THRIVE"
+                  },
+                  {
+                    "concept": "3cce9514-26fe-102b-80cb-0017a47871b2",
+                    "label": "DEPRESSION"
+                  },
+                  {
+                    "concept": "3cb76644-006d-4ee1-9191-78eda4964598",
+                    "label": "Meningitis Suspect"
+                  },
+                  {
+                    "concept": "3cd771ac-26fe-102b-80cb-0017a47871b2",
+                    "label": "PULMONARY EFFUSION"
+                  },
+                  {
+                    "concept": "3ccc9d72-26fe-102b-80cb-0017a47871b2",
+                    "label": "RICKETS diagnosis retired (retired)"
+                  },
+                  {
+                    "concept": "3cce9834-26fe-102b-80cb-0017a47871b2",
+                    "label": "ULCER DUODENAL (retired)"
+                  },
+                  {
+                    "concept": "61aff62b-6bad-41eb-a75a-33371b4bd413",
+                    "label": "Ulcers of skin"
+                  },
+                  {
+                    "concept": "3cccaf06-26fe-102b-80cb-0017a47871b2",
+                    "label": "MEASLES"
+                  },
+                  {
+                    "concept": "3cccfde4-26fe-102b-80cb-0017a47871b2",
+                    "label": "TONSILLITIS"
+                  },
+                  {
+                    "concept": "3cccb654-26fe-102b-80cb-0017a47871b2",
+                    "label": "MALNUTRITION"
+                  },
+                  {
+                    "concept": "3cccaab0-26fe-102b-80cb-0017a47871b2",
+                    "label": "MENINGITIS"
+                  },
+                  {
+                    "concept": "2e51f36d-e26e-4736-8c5e-6a9276925942",
+                    "label": "Respiratory infections acute (ARI) other"
+                  },
+                  {
+                    "concept": "3cd678b0-26fe-102b-80cb-0017a47871b2",
+                    "label": "ENTEROPATHY"
+                  },
+                  {
+                    "concept": "3ccd1a36-26fe-102b-80cb-0017a47871b2",
+                    "label": "PUERPERAL SEPSIS"
+                  },
+                  {
+                    "concept": "3ce5c11c-26fe-102b-80cb-0017a47871b2",
+                    "label": "SEBORRHOEIC DERMATITIS"
+                  },
+                  {
+                    "concept": "3cceab1c-26fe-102b-80cb-0017a47871b2",
+                    "label": "RHEUMATIC HEART DISEASE"
+                  },
+                  {
+                    "concept": "3cce7886-26fe-102b-80cb-0017a47871b2",
+                    "label": "MALARIA, RULE OUT (retired)"
+                  },
+                  {
+                    "concept": "3cd9e0b8-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONVULSIONS OR NEUROLOGICAL DEFICIT PRESUMED CEREBRAL LYMPHOMA"
+                  },
+                  {
+                    "concept": "3ce89cb6-26fe-102b-80cb-0017a47871b2",
+                    "label": "UNEXPLAINED PERSISTENT HEPATOMEGALY AND SPLENOMEGALY"
+                  },
+                  {
+                    "concept": "3cccd076-26fe-102b-80cb-0017a47871b2",
+                    "label": "ACCIDENT, MOTOR VEHICLE"
+                  },
+                  {
+                    "concept": "3cce938e-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONVULSIONS"
+                  },
+                  {
+                    "concept": "3ce89770-26fe-102b-80cb-0017a47871b2",
+                    "label": "RECURRENT BACTERAEMIA"
+                  },
+                  {
+                    "concept": "c8049cbd-c130-45a9-8ea9-37c06c9f610f",
+                    "label": "Ear infections"
+                  },
+                  {
+                    "concept": "04d04ef3-3c47-4d0e-a869-c5565cae5430",
+                    "label": "Discharge, Vaginal"
+                  },
+                  {
+                    "concept": "3cce889e-26fe-102b-80cb-0017a47871b2",
+                    "label": "HELMINTHIASIS"
+                  },
+                  {
+                    "concept": "3ccd398a-26fe-102b-80cb-0017a47871b2",
+                    "label": "TINEA CAPITIS"
+                  },
+                  {
+                    "concept": "3cccac22-26fe-102b-80cb-0017a47871b2",
+                    "label": "WHOOPING COUGH (retired)"
+                  },
+                  {
+                    "concept": "3ce8d3ca-26fe-102b-80cb-0017a47871b2",
+                    "label": "LEIOMYOSARCOMA"
+                  },
+                  {
+                    "concept": "3ccea66c-26fe-102b-80cb-0017a47871b2",
+                    "label": "OTITIS EXTERNA"
+                  },
+                  {
+                    "concept": "320e9bd2-f672-4444-8180-9008180c5f8f",
+                    "label": "Bubo / scrotal swelling"
+                  },
+                  {
+                    "concept": "3cce906e-26fe-102b-80cb-0017a47871b2",
+                    "label": "CANDIDIASIS"
+                  },
+                  {
+                    "concept": "3ccc5092-26fe-102b-80cb-0017a47871b2",
+                    "label": "GALLSTONES"
+                  },
+                  {
+                    "concept": "3cce26e2-26fe-102b-80cb-0017a47871b2",
+                    "label": "PID (retired)"
+                  },
+                  {
+                    "concept": "3cd14cb4-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMONIA, LOBAR"
+                  },
+                  {
+                    "concept": "3cd9d064-26fe-102b-80cb-0017a47871b2",
+                    "label": "MENINGITIS ACUTE BACTERIAL"
+                  },
+                  {
+                    "concept": "3ccea98c-26fe-102b-80cb-0017a47871b2",
+                    "label": "RHD (retired)"
+                  },
+                  {
+                    "concept": "3cce870e-26fe-102b-80cb-0017a47871b2",
+                    "label": "CHOLERA"
+                  },
+                  {
+                    "concept": "3cd4eebe-26fe-102b-80cb-0017a47871b2",
+                    "label": "ACQUIRED IMMUNODEFICIENCY SYNDROME"
+                  },
+                  {
+                    "concept": "3ccea34c-26fe-102b-80cb-0017a47871b2",
+                    "label": "LEUKEMIA"
+                  },
+                  {
+                    "concept": "3cce8380-26fe-102b-80cb-0017a47871b2",
+                    "label": "INFECTION SKIN v2 (retired)"
+                  },
+                  {
+                    "concept": "3ccd0744-26fe-102b-80cb-0017a47871b2",
+                    "label": "EYE PROBLEM OTHER (retired)"
+                  },
+                  {
+                    "concept": "3cd4f88c-26fe-102b-80cb-0017a47871b2",
+                    "label": "FALSE LABOR"
+                  },
+                  {
+                    "concept": "3cd4815e-26fe-102b-80cb-0017a47871b2",
+                    "label": "PULMONARY TUBERCULOSIS retired (retired)"
+                  },
+                  {
+                    "concept": "3cd4dca8-26fe-102b-80cb-0017a47871b2",
+                    "label": "HUMAN IMMUNODEFICIENCY VIRUS"
+                  },
+                  {
+                    "concept": "3cce52e8-26fe-102b-80cb-0017a47871b2",
+                    "label": "SEXUAL ASSAULT"
+                  },
+                  {
+                    "concept": "3cce5dd8-26fe-102b-80cb-0017a47871b2",
+                    "label": "GASTRITIS"
+                  },
+                  {
+                    "concept": "3cceb490-26fe-102b-80cb-0017a47871b2",
+                    "label": "SEPSIS NEONATAL (retired)"
+                  },
+                  {
+                    "concept": "3cce8bb4-26fe-102b-80cb-0017a47871b2",
+                    "label": "APPENDICITIS"
+                  },
+                  {
+                    "concept": "3cd35112-26fe-102b-80cb-0017a47871b2",
+                    "label": "TRICHOMONAS VAGINALIS (retired)"
+                  },
+                  {
+                    "concept": "3ce8c8b2-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIARRHEA, CHRONIC"
+                  },
+                  {
+                    "concept": "3cce674c-26fe-102b-80cb-0017a47871b2",
+                    "label": "FRACTURE, COLLES"
+                  },
+                  {
+                    "concept": "3ccc7bbc-26fe-102b-80cb-0017a47871b2",
+                    "label": "HEPATITIS C"
+                  },
+                  {
+                    "concept": "3ce6cd14-26fe-102b-80cb-0017a47871b2",
+                    "label": "GENITAL ULCERS, LGV"
+                  },
+                  {
+                    "concept": "3cce8060-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMONIA BRONCHIAL (retired)"
+                  },
+                  {
+                    "concept": "3cce642c-26fe-102b-80cb-0017a47871b2",
+                    "label": "ASSAULT"
+                  },
+                  {
+                    "concept": "3671f13d-c27c-4b31-b815-a6705e53ef74",
+                    "label": "Diarrhea with dehydration"
+                  },
+                  {
+                    "concept": "3cceb170-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIABETES INSIPIDUS"
+                  },
+                  {
+                    "concept": "3cd57c6c-26fe-102b-80cb-0017a47871b2",
+                    "label": "VARICOSE LEG ULCERS"
+                  },
+                  {
+                    "concept": "3cccf4a2-26fe-102b-80cb-0017a47871b2",
+                    "label": "UPPER RESPIRATORY TRACT INFECTION"
+                  },
+                  {
+                    "concept": "2f85bc92-44af-4877-bff1-679c54a4ace7",
+                    "label": "Perineal tear (3rd Degree)"
+                  },
+                  {
+                    "concept": "3cce7700-26fe-102b-80cb-0017a47871b2",
+                    "label": "RASH, SEPTIC (retired)"
+                  },
+                  {
+                    "concept": "3cd20e24-26fe-102b-80cb-0017a47871b2",
+                    "label": "VENOUS STASIS"
+                  },
+                  {
+                    "concept": "3ccdfaf0-26fe-102b-80cb-0017a47871b2",
+                    "label": "DYSENTERY (retired)"
+                  },
+                  {
+                    "concept": "3ce42f3c-26fe-102b-80cb-0017a47871b2",
+                    "label": "PSYCHIATRIC HISTORY"
+                  },
+                  {
+                    "concept": "edf4ecc4-44f6-457a-b561-179f4426b16a",
+                    "label": "DIABETES v2"
+                  },
+                  {
+                    "concept": "3cce0874-26fe-102b-80cb-0017a47871b2",
+                    "label": "PUD (retired)"
+                  },
+                  {
+                    "concept": "3ce898e2-26fe-102b-80cb-0017a47871b2",
+                    "label": "LINEAL GINGIVAL ERYTHEMA"
+                  },
+                  {
+                    "concept": "3ccc59f2-26fe-102b-80cb-0017a47871b2",
+                    "label": "BRONCHITIS, RECURRENT"
+                  },
+                  {
+                    "concept": "3ccd206c-26fe-102b-80cb-0017a47871b2",
+                    "label": "CELLULITIS"
+                  },
+                  {
+                    "concept": "3cd50188-26fe-102b-80cb-0017a47871b2",
+                    "label": "HYPERTENSION"
+                  },
+                  {
+                    "concept": "3cd4879e-26fe-102b-80cb-0017a47871b2",
+                    "label": "TINEA CORPORIS"
+                  },
+                  {
+                    "concept": "3cccbc12-26fe-102b-80cb-0017a47871b2",
+                    "label": "CIRCULATORY DISEASE (retired)"
+                  },
+                  {
+                    "concept": "3ccc49bc-26fe-102b-80cb-0017a47871b2",
+                    "label": "ASTHMA EXACERBATION"
+                  },
+                  {
+                    "concept": "3ccd369c-26fe-102b-80cb-0017a47871b2",
+                    "label": "ALLERGY"
+                  },
+                  {
+                    "concept": "3ccf3d70-26fe-102b-80cb-0017a47871b2",
+                    "label": "CANDIDIASIS, VAGINAL"
+                  },
+                  {
+                    "concept": "3cce8510-26fe-102b-80cb-0017a47871b2",
+                    "label": "GASTROENTERITIS"
+                  },
+                  {
+                    "concept": "3ccc7892-26fe-102b-80cb-0017a47871b2",
+                    "label": "HEPATITIS A"
+                  },
+                  {
+                    "concept": "3cd4f508-26fe-102b-80cb-0017a47871b2",
+                    "label": "CUTANEOUS ABSCESS NOT SPECIFIED (retired)"
+                  },
+                  {
+                    "concept": "21f708a6-1631-4145-90b3-4b01dd6ea63c",
+                    "label": "Diarrhea bloody (dysentery)"
+                  },
+                  {
+                    "concept": "3cceaca2-26fe-102b-80cb-0017a47871b2",
+                    "label": "SINUSITIS"
+                  },
+                  {
+                    "concept": "3ccc91c4-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMONIA"
+                  },
+                  {
+                    "concept": "3ccc412e-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANEMIA, BLOOD LOSS"
+                  },
+                  {
+                    "concept": "3ce5c298-26fe-102b-80cb-0017a47871b2",
+                    "label": "FUNGAL NAIL INFECTION"
+                  },
+                  {
+                    "concept": "d587746f-a560-44a2-b991-0fc2f7e4d1eb",
+                    "label": "Discharge, Urethral Male"
+                  },
+                  {
+                    "concept": "3cd11d66-26fe-102b-80cb-0017a47871b2",
+                    "label": "KNEE, ARTHRITIS (retired)"
+                  },
+                  {
+                    "concept": "3ccffd0a-26fe-102b-80cb-0017a47871b2",
+                    "label": "PARAPHIMOSIS"
+                  },
+                  {
+                    "concept": "3cceb620-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANTEPARTUM HEMORRHAGE"
+                  },
+                  {
+                    "concept": "3ce85e2c-26fe-102b-80cb-0017a47871b2",
+                    "label": "TUBERCULOMA"
+                  },
+                  {
+                    "concept": "3cce8d4e-26fe-102b-80cb-0017a47871b2",
+                    "label": "RHEUMATOID ARTHRITIS"
+                  },
+                  {
+                    "concept": "26403608-98f9-49c2-b005-7c9b8c4d2795",
+                    "label": "Eye problem Cataract"
+                  },
+                  {
+                    "concept": "3ccd1ee6-26fe-102b-80cb-0017a47871b2",
+                    "label": "GOITER"
+                  },
+                  {
+                    "concept": "249b4b7f-525b-4404-ae15-eca5ef1dff1b",
+                    "label": "SEVERE ANEMIA"
+                  },
+                  {
+                    "concept": "3ce8f7ba-26fe-102b-80cb-0017a47871b2",
+                    "label": "PROGRESSIVE MULTIFOCAL LEUKOENCEPHALOPATHY"
+                  },
+                  {
+                    "concept": "3cd4fd00-26fe-102b-80cb-0017a47871b2",
+                    "label": "FEVER OF UNKNOWN ORIGIN"
+                  },
+                  {
+                    "concept": "3cd285ac-26fe-102b-80cb-0017a47871b2",
+                    "label": "RASH ALLERGIC v2(retired)"
+                  },
+                  {
+                    "concept": "7dbf5510-c94f-44d2-aba4-6942c6f8e167",
+                    "label": "Vitamin A deficiency with keratomalacia"
+                  },
+                  {
+                    "concept": "3ccfb868-26fe-102b-80cb-0017a47871b2",
+                    "label": "PELLAGRA"
+                  },
+                  {
+                    "concept": "3cebc756-26fe-102b-80cb-0017a47871b2",
+                    "label": "ENCEPHALOPATHY"
+                  },
+                  {
+                    "concept": "3cceb300-26fe-102b-80cb-0017a47871b2",
+                    "label": "NEONATAL SEPSIS"
+                  },
+                  {
+                    "concept": "3ce8d866-26fe-102b-80cb-0017a47871b2",
+                    "label": "NOCARDIOSIS"
+                  },
+                  {
+                    "concept": "63780718-5073-4477-85b8-761b4dfe87dc",
+                    "label": "Physical traumas, other than fractures"
+                  },
+                  {
+                    "concept": "3ccd1d60-26fe-102b-80cb-0017a47871b2",
+                    "label": "STY (retired)"
+                  },
+                  {
+                    "concept": "3cd9d7da-26fe-102b-80cb-0017a47871b2",
+                    "label": "ENCEPHALOPATHY PRESUMED NOT DUE TO HIV "
+                  },
+                  {
+                    "concept": "3ccd109a-26fe-102b-80cb-0017a47871b2",
+                    "label": "AMOEBIASIS"
+                  },
+                  {
+                    "concept": "3cce6a6c-26fe-102b-80cb-0017a47871b2",
+                    "label": "SHOULDER DISLOCATION"
+                  },
+                  {
+                    "concept": "3cd9e694-26fe-102b-80cb-0017a47871b2",
+                    "label": "HERPES SIMPLEX GENITAL INFECTION"
+                  },
+                  {
+                    "concept": "3cd7adb6-26fe-102b-80cb-0017a47871b2",
+                    "label": "HIV INFECTED"
+                  },
+                  {
+                    "concept": "3cce0a90-26fe-102b-80cb-0017a47871b2",
+                    "label": "EPILEPSY"
+                  },
+                  {
+                    "concept": "ac9a4589-f884-48fe-b670-3833988dda98",
+                    "label": "OTHER ENTERITIS"
+                  },
+                  {
+                    "concept": "3cd67d1a-26fe-102b-80cb-0017a47871b2",
+                    "label": "CARDIOVASCULAR DISEASE"
+                  },
+                  {
+                    "concept": "3cd1a01a-26fe-102b-80cb-0017a47871b2",
+                    "label": "CERUMEN IMPACTION"
+                  },
+                  {
+                    "concept": "3cce8a2e-26fe-102b-80cb-0017a47871b2",
+                    "label": "SOFT TISSUE INJURY retired (retired)"
+                  },
+                  {
+                    "concept": "3ccfb228-26fe-102b-80cb-0017a47871b2",
+                    "label": "POISONING, FOOD (retired)"
+                  },
+                  {
+                    "concept": "3cceae50-26fe-102b-80cb-0017a47871b2",
+                    "label": "SYPHILIS"
+                  },
+                  {
+                    "concept": "3ccd122a-26fe-102b-80cb-0017a47871b2",
+                    "label": "HEAD INJURY"
+                  },
+                  {
+                    "concept": "316ef3e4-c2a6-4bdc-8438-9b4a6a2a7898",
+                    "label": "Eclampsia /Severe Pre Eclampsia"
+                  },
+                  {
+                    "concept": "3ccd010e-26fe-102b-80cb-0017a47871b2",
+                    "label": "OTITIS MEDIA"
+                  },
+                  {
+                    "concept": "3cccb370-26fe-102b-80cb-0017a47871b2",
+                    "label": "BILHARZIA (retired)"
+                  },
+                  {
+                    "concept": "3cccc1da-26fe-102b-80cb-0017a47871b2",
+                    "label": "DISEASE OF BLOOD AND BLOOD FORMING ORGANS (retired)"
+                  },
+                  {
+                    "concept": "3cd961c4-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANGIO-EDEMA"
+                  },
+                  {
+                    "concept": "f45c6da0-9e41-4dd5-a347-4c2ca47a61de",
+                    "label": "Malaria confirmed simple"
+                  },
+                  {
+                    "concept": "3ccfabb6-26fe-102b-80cb-0017a47871b2",
+                    "label": "SCHISTOSOMIASIS"
+                  },
+                  {
+                    "concept": "3cd505b6-26fe-102b-80cb-0017a47871b2",
+                    "label": "MISSED ABORTION"
+                  },
+                  {
+                    "concept": "3cce5c48-26fe-102b-80cb-0017a47871b2",
+                    "label": "FUNGAL INFECTION"
+                  },
+                  {
+                    "concept": "3ce5be24-26fe-102b-80cb-0017a47871b2",
+                    "label": "RECURRENT ORAL ULCERATION"
+                  },
+                  {
+                    "concept": "3cd12d24-26fe-102b-80cb-0017a47871b2",
+                    "label": "ALLERGIC RASH (retired)"
+                  },
+                  {
+                    "concept": "3ccccd92-26fe-102b-80cb-0017a47871b2",
+                    "label": "ACCIDENT, NOT OTHERWISE SPECIFIED"
+                  },
+                  {
+                    "concept": "3cd15f92-26fe-102b-80cb-0017a47871b2",
+                    "label": "BARTHOLIN(APOSTROPHE)S GLAND ABSCESS"
+                  },
+                  {
+                    "concept": "3ccd042e-26fe-102b-80cb-0017a47871b2",
+                    "label": "ARTHRITIS"
+                  },
+                  {
+                    "concept": "3cccb938-26fe-102b-80cb-0017a47871b2",
+                    "label": "CATARACT"
+                  },
+                  {
+                    "concept": "a6b43705-5299-4b0f-a4dd-4076dfb6b60a",
+                    "label": "RECURRENT SEVERE PRESUMED BACTERIAL INFECTIONS"
+                  },
+                  {
+                    "concept": "3ce5c70c-26fe-102b-80cb-0017a47871b2",
+                    "label": "UNEXPLAINED ANAEMIA, NEUTROPAENIA, OR THROBOCYTOPAENIA"
+                  },
+                  {
+                    "concept": "3ce5ccfc-26fe-102b-80cb-0017a47871b2",
+                    "label": "ATYPICAL DISSEMINATED LEISHMANIASIS"
+                  },
+                  {
+                    "concept": "3cccff74-26fe-102b-80cb-0017a47871b2",
+                    "label": "FURUNCULOSIS"
+                  },
+                  {
+                    "concept": "3cd9e518-26fe-102b-80cb-0017a47871b2",
+                    "label": "CHLAMYDIA TRACHOMATIS"
+                  },
+                  {
+                    "concept": "ba4c708e-440a-4919-866b-3be34f9bbe7a",
+                    "label": "Gastritis and duodenitis"
+                  },
+                  {
+                    "concept": "3ccd1bda-26fe-102b-80cb-0017a47871b2",
+                    "label": "DENTAL CARIES"
+                  },
+                  {
+                    "concept": "3cd26784-26fe-102b-80cb-0017a47871b2",
+                    "label": "KAPOSI SARCOMA ORAL"
+                  },
+                  {
+                    "concept": "3ccfaed6-26fe-102b-80cb-0017a47871b2",
+                    "label": "WOUND, PIERCE (retired)"
+                  },
+                  {
+                    "concept": "3ccc9912-26fe-102b-80cb-0017a47871b2",
+                    "label": "PREGNANCY, MISCARRIAGE"
+                  },
+                  {
+                    "concept": "3cd9d366-26fe-102b-80cb-0017a47871b2",
+                    "label": "MENINGITIS SUB-ACUTE PRESUMED TUBERCULOSIS"
+                  },
+                  {
+                    "concept": "f2af083c-75bc-4435-b2d1-6ccfaeb720ae",
+                    "label": "Malaria confirmed with minor digestive symptoms"
+                  },
+                  {
+                    "concept": "3cce96a4-26fe-102b-80cb-0017a47871b2",
+                    "label": "DUODENAL ULCER"
+                  },
+                  {
+                    "concept": "3cd53234-26fe-102b-80cb-0017a47871b2",
+                    "label": "OPEN WOUND OF UNSPECIFIED BODY REGION (retired)"
+                  },
+                  {
+                    "concept": "3cee7fb4-26fe-102b-80cb-0017a47871b2",
+                    "label": "OTHER NON-CODED"
+                  },
+                  {
+                    "concept": "3cce6f08-26fe-102b-80cb-0017a47871b2",
+                    "label": "HYPERTENSION retired (retired)"
+                  },
+                  {
+                    "concept": "3cce322c-26fe-102b-80cb-0017a47871b2",
+                    "label": "DECEASED"
+                  },
+                  {
+                    "concept": "3cd5039a-26fe-102b-80cb-0017a47871b2",
+                    "label": "INJURY OF UNSPECIFIED BODY REGION (retired)"
+                  },
+                  {
+                    "concept": "fb6507ea-08e0-4734-ac24-99a83740b425",
+                    "label": "Uterine rupture"
+                  },
+                  {
+                    "concept": "3ccc4764-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANEMIA"
+                  },
+                  {
+                    "concept": "3cd9c60a-26fe-102b-80cb-0017a47871b2",
+                    "label": "SUB-ACUTE PNEUMONIA PRESUMED PCP"
+                  },
+                  {
+                    "concept": "3cd173f6-26fe-102b-80cb-0017a47871b2",
+                    "label": "KAPOSIS SARCOMA"
+                  },
+                  {
+                    "concept": "3ce8d6d6-26fe-102b-80cb-0017a47871b2",
+                    "label": "NEPHROPATHY"
+                  },
+                  {
+                    "concept": "3cce73b8-26fe-102b-80cb-0017a47871b2",
+                    "label": "ABORTION (retired)"
+                  },
+                  {
+                    "concept": "3ccd0a64-26fe-102b-80cb-0017a47871b2",
+                    "label": "DERMATITIS, ALLERGIC"
+                  },
+                  {
+                    "concept": "84fa8195-e631-43f4-844d-a43e96a79fb0",
+                    "label": "FEVER GREATER THAN FOUR WEEKS"
+                  },
+                  {
+                    "concept": "3ccf388e-26fe-102b-80cb-0017a47871b2",
+                    "label": "THRUSH (retired)"
+                  },
+                  {
+                    "concept": "3cce9ce4-26fe-102b-80cb-0017a47871b2",
+                    "label": "GASTRIC ULCER"
+                  },
+                  {
+                    "concept": "3cce8ed4-26fe-102b-80cb-0017a47871b2",
+                    "label": "ARTHRITIS RHEUMATOID (retired)"
+                  },
+                  {
+                    "concept": "3cce514e-26fe-102b-80cb-0017a47871b2",
+                    "label": "WORMS NOS (retired)"
+                  },
+                  {
+                    "concept": "3ce5ca04-26fe-102b-80cb-0017a47871b2",
+                    "label": "EXTRAPULMONARY CRYPTOCOCCOSIS INCLUDING MENINGITIS"
+                  },
+                  {
+                    "concept": "3cce199a-26fe-102b-80cb-0017a47871b2",
+                    "label": "WOUND NOS (retired)"
+                  },
+                  {
+                    "concept": "3cd15484-26fe-102b-80cb-0017a47871b2",
+                    "label": "DEMENTIA, SENILE"
+                  },
+                  {
+                    "concept": "3ccca36c-26fe-102b-80cb-0017a47871b2",
+                    "label": "URINARY TRACT INFECTION"
+                  },
+                  {
+                    "concept": "3ccca93e-26fe-102b-80cb-0017a47871b2",
+                    "label": "LEPROSY"
+                  },
+                  {
+                    "concept": "3cd15934-26fe-102b-80cb-0017a47871b2",
+                    "label": "HYPEREMESIS GRAVIDARUM"
+                  },
+                  {
+                    "concept": "3ccfbb88-26fe-102b-80cb-0017a47871b2",
+                    "label": "STI,MALES (retired)"
+                  },
+                  {
+                    "concept": "3cd47b1e-26fe-102b-80cb-0017a47871b2",
+                    "label": "PCP retired (retired)"
+                  },
+                  {
+                    "concept": "3ccf3be0-26fe-102b-80cb-0017a47871b2",
+                    "label": "VAGINAL CANDIDIASIS (retired)"
+                  },
+                  {
+                    "concept": "3cd15614-26fe-102b-80cb-0017a47871b2",
+                    "label": "SENILE DEMENTIA (retired)"
+                  },
+                  {
+                    "concept": "3ccc9bf6-26fe-102b-80cb-0017a47871b2",
+                    "label": "PREGNANCY, TERMINATION"
+                  },
+                  {
+                    "concept": "3cce578e-26fe-102b-80cb-0017a47871b2",
+                    "label": "BITE, HUMAN"
+                  },
+                  {
+                    "concept": "3ccd2b02-26fe-102b-80cb-0017a47871b2",
+                    "label": "TYPHOID FEVER"
+                  },
+                  {
+                    "concept": "3ccc905c-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMONIA, TUBERCULOUS"
+                  },
+                  {
+                    "concept": "3ccca7cc-26fe-102b-80cb-0017a47871b2",
+                    "label": "TUBERCULOSIS"
+                  },
+                  {
+                    "concept": "3ce6ce90-26fe-102b-80cb-0017a47871b2",
+                    "label": "GENITAL ULCERS, CHANCROID"
+                  },
+                  {
+                    "concept": "3cd50f8e-26fe-102b-80cb-0017a47871b2",
+                    "label": "DEPRESSIVE EPISODE (retired)"
+                  },
+                  {
+                    "concept": "3ccd2666-26fe-102b-80cb-0017a47871b2",
+                    "label": "ABSCESS"
+                  },
+                  {
+                    "concept": "3cd9cd6c-26fe-102b-80cb-0017a47871b2",
+                    "label": "SEVERE DYSPHAGIA PRESUMED INVASIVE"
+                  },
+                  {
+                    "concept": "3cd0f200-26fe-102b-80cb-0017a47871b2",
+                    "label": "FUNGAL SKIN INFECTION (retired)"
+                  },
+                  {
+                    "concept": "3cd533ba-26fe-102b-80cb-0017a47871b2",
+                    "label": "SEXUALLY TRANSMITTED DISEASE UNSPECIFIED (retired)"
+                  },
+                  {
+                    "concept": "3ce895fe-26fe-102b-80cb-0017a47871b2",
+                    "label": "CHRONIC HIV LUNG DISEASE"
+                  },
+                  {
+                    "concept": "3cd67b9e-26fe-102b-80cb-0017a47871b2",
+                    "label": "NEUROLOGICAL SYNDROMES OTHER"
+                  },
+                  {
+                    "concept": "3ccd2986-26fe-102b-80cb-0017a47871b2",
+                    "label": "SCABIES"
+                  },
+                  {
+                    "concept": "3ccd0f0a-26fe-102b-80cb-0017a47871b2",
+                    "label": "MALARIA"
+                  },
+                  {
+                    "concept": "3cd1209a-26fe-102b-80cb-0017a47871b2",
+                    "label": "WORMS, INTESTINAL (retired)"
+                  },
+                  {
+                    "concept": "3cd47e3e-26fe-102b-80cb-0017a47871b2",
+                    "label": "ECZEMA"
+                  },
+                  {
+                    "concept": "3cce0658-26fe-102b-80cb-0017a47871b2",
+                    "label": "GUD (retired)"
+                  },
+                  {
+                    "concept": "3cebb5fe-26fe-102b-80cb-0017a47871b2",
+                    "label": "CANDIDIASIS, ORAL"
+                  },
+                  {
+                    "concept": "3cce629c-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIABETES MELLITUS"
+                  },
+                  {
+                    "concept": "3ccc7a0e-26fe-102b-80cb-0017a47871b2",
+                    "label": "HEPATITIS B"
+                  },
+                  {
+                    "concept": "3cd4e978-26fe-102b-80cb-0017a47871b2",
+                    "label": "VARICELLA"
+                  },
+                  {
+                    "concept": "6d06025b-0558-46a7-ba24-b4beb9346e21",
+                    "label": "Threat of premature delivery"
+                  },
+                  {
+                    "concept": "3cce4ae6-26fe-102b-80cb-0017a47871b2",
+                    "label": "BRUCELLOSIS"
+                  },
+                  {
+                    "concept": "3ce5c888-26fe-102b-80cb-0017a47871b2",
+                    "label": "CENTRAL NERVOUS SYSTEM TOXOPLASMOSIS"
+                  },
+                  {
+                    "concept": "3cd66fc8-26fe-102b-80cb-0017a47871b2",
+                    "label": "MULTIDRUG-RESISTANT TB"
+                  },
+                  {
+                    "concept": "3ccca650-26fe-102b-80cb-0017a47871b2",
+                    "label": "YELLOW FEVER"
+                  },
+                  {
+                    "concept": "3cccb4d8-26fe-102b-80cb-0017a47871b2",
+                    "label": "INTESTINAL WORMS (retired)"
+                  },
+                  {
+                    "concept": "3ccccc20-26fe-102b-80cb-0017a47871b2",
+                    "label": "TOXICITY, NOT OTHERWISE SPECIFIED"
+                  },
+                  {
+                    "concept": "3cce5928-26fe-102b-80cb-0017a47871b2",
+                    "label": "URETHRITIS retired (retired)"
+                  },
+                  {
+                    "concept": "3ccccaae-26fe-102b-80cb-0017a47871b2",
+                    "label": "PYREXIA OF UNKNOWN ORIGON(PUO) (retired)"
+                  },
+                  {
+                    "concept": "3cce65bc-26fe-102b-80cb-0017a47871b2",
+                    "label": "FRACTURE"
+                  },
+                  {
+                    "concept": "3ccc4bf6-26fe-102b-80cb-0017a47871b2",
+                    "label": "ASTHMA"
+                  },
+                  {
+                    "concept": "3cce5478-26fe-102b-80cb-0017a47871b2",
+                    "label": "BITE, DOG"
+                  },
+                  {
+                    "concept": "3cd134f4-26fe-102b-80cb-0017a47871b2",
+                    "label": "SCHIZOPHRENIA"
+                  },
+                  {
+                    "concept": "3ce5bca8-26fe-102b-80cb-0017a47871b2",
+                    "label": "ANGULAR CHEILITIS"
+                  },
+                  {
+                    "concept": "3cd4f6fc-26fe-102b-80cb-0017a47871b2",
+                    "label": "LOW BACK PAIN (retired)"
+                  },
+                  {
+                    "concept": "3cd4f2f6-26fe-102b-80cb-0017a47871b2",
+                    "label": "CHALAZION"
+                  },
+                  {
+                    "concept": "566a211b-9421-4f89-90b9-9b42964bb9f9",
+                    "label": "Diarrhea no dehydration"
+                  },
+                  {
+                    "concept": "c9c5c4cb-e214-4f76-badf-273d9a55615c",
+                    "label": "Needle stick-injuries (or other health worker HIV exposure)"
+                  },
+                  {
+                    "concept": "3ccc8314-26fe-102b-80cb-0017a47871b2",
+                    "label": "MALARIA, MILD (retired)"
+                  },
+                  {
+                    "concept": "3cce5608-26fe-102b-80cb-0017a47871b2",
+                    "label": "BITE, ANIMAL"
+                  },
+                  {
+                    "concept": "3ccd2800-26fe-102b-80cb-0017a47871b2",
+                    "label": "VAGINITIS"
+                  },
+                  {
+                    "concept": "3ce6b07c-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONVULSIONS OR NEUROLOGICAL DEFICIT PRESUMED MALARIA"
+                  },
+                  {
+                    "concept": "3cd9dad2-26fe-102b-80cb-0017a47871b2",
+                    "label": "DYSENTERY BACILLIARY"
+                  },
+                  {
+                    "concept": "3cce81f0-26fe-102b-80cb-0017a47871b2",
+                    "label": "SKIN INFECTION NOS (retired)"
+                  },
+                  {
+                    "concept": "3ccc6884-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIARRHEA, CHOLERA (retired)"
+                  },
+                  {
+                    "concept": "3ce8c3d0-26fe-102b-80cb-0017a47871b2",
+                    "label": "CARDIOMYOPATHY"
+                  },
+                  {
+                    "concept": "3ccde650-26fe-102b-80cb-0017a47871b2",
+                    "label": "INJURY"
+                  },
+                  {
+                    "concept": "0198eaf6-cc87-11e8-a985-27f24ca34d9a",
+                    "label": "HEPATITIS"
+                  },
+                  {
+                    "concept": "3cd4ff6c-26fe-102b-80cb-0017a47871b2",
+                    "label": "PELVIC INFLAMMATORY DISEASE"
+                  },
+                  {
+                    "concept": "3cccb082-26fe-102b-80cb-0017a47871b2",
+                    "label": "MUMPS"
+                  },
+                  {
+                    "concept": "3ce6b4f0-26fe-102b-80cb-0017a47871b2",
+                    "label": "SYMPTOMATIC NEPHROPATHY OR CARDIOMYOPATHY PRESUMED DUE TO HIV"
+                  },
+                  {
+                    "concept": "3cce68dc-26fe-102b-80cb-0017a47871b2",
+                    "label": "RTA (retired)"
+                  },
+                  {
+                    "concept": "3cebbaae-26fe-102b-80cb-0017a47871b2",
+                    "label": "ORAL HAIRY LEUKOPLAKIA"
+                  },
+                  {
+                    "concept": "8b7c3aaa-2b72-46dd-aba6-1bc40ded4607",
+                    "label": "Abscesses"
+                  },
+                  {
+                    "concept": "3ccc52d6-26fe-102b-80cb-0017a47871b2",
+                    "label": "BILIARY TRACT DISEASE NOT OTHERWISE SPECIFIED"
+                  },
+                  {
+                    "concept": "3cda9b98-26fe-102b-80cb-0017a47871b2",
+                    "label": "TB STATUS DRUG RESISTANCE"
+                  },
+                  {
+                    "concept": "3cccf948-26fe-102b-80cb-0017a47871b2",
+                    "label": "WOUND, SEPTIC"
+                  },
+                  {
+                    "concept": "3cd11bd6-26fe-102b-80cb-0017a47871b2",
+                    "label": "ARTHRITIS, KNEE (retired)"
+                  },
+                  {
+                    "concept": "3cd1222a-26fe-102b-80cb-0017a47871b2",
+                    "label": "SPONDLOSIS (retired)"
+                  },
+                  {
+                    "concept": "3ccd40ce-26fe-102b-80cb-0017a47871b2",
+                    "label": "BRONCHITIS"
+                  },
+                  {
+                    "concept": "3ce89a68-26fe-102b-80cb-0017a47871b2",
+                    "label": "EXTRAPULMONARY TUBERCULOSIS WITHOUT LYMPHADENOPATHY"
+                  },
+                  {
+                    "concept": "6586f3aa-8052-4969-ad77-49bf970b76cd",
+                    "label": "Abortions"
+                  },
+                  {
+                    "concept": "3cce7232-26fe-102b-80cb-0017a47871b2",
+                    "label": "CHOLECYSTITIS"
+                  },
+                  {
+                    "concept": "3ccfb3b8-26fe-102b-80cb-0017a47871b2",
+                    "label": "TOXICITY, FOOD"
+                  },
+                  {
+                    "concept": "3ce85fa8-26fe-102b-80cb-0017a47871b2",
+                    "label": "VAGINAL/URETHRAL DISCHARGE NON-GC"
+                  },
+                  {
+                    "concept": "3cce1bc0-26fe-102b-80cb-0017a47871b2",
+                    "label": "FEVER NOS (retired)"
+                  },
+                  {
+                    "concept": "3ce6cb8e-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIARRHEA, BACTERIAL"
+                  },
+                  {
+                    "concept": "3ce85b48-26fe-102b-80cb-0017a47871b2",
+                    "label": "HEPATOTOXICITY"
+                  },
+                  {
+                    "concept": "6ad6c1fb-519a-48e8-bc71-58fcacc4d441",
+                    "label": "Eye problem Glaucoma"
+                  },
+                  {
+                    "concept": "3cd0f46c-26fe-102b-80cb-0017a47871b2",
+                    "label": "SKIN INFECTION, FUNGAL (retired)"
+                  },
+                  {
+                    "concept": "3cd195ca-26fe-102b-80cb-0017a47871b2",
+                    "label": "DERMATITIS NOS (retired)"
+                  },
+                  {
+                    "concept": "3ce60226-26fe-102b-80cb-0017a47871b2",
+                    "label": "HYPOKALEMIA"
+                  },
+                  {
+                    "concept": "3ccd029e-26fe-102b-80cb-0017a47871b2",
+                    "label": "MASTITIS"
+                  },
+                  {
+                    "concept": "3ccd16da-26fe-102b-80cb-0017a47871b2",
+                    "label": "WOUND, DEEP"
+                  },
+                  {
+                    "concept": "3cccc068-26fe-102b-80cb-0017a47871b2",
+                    "label": "NEOPLASM"
+                  },
+                  {
+                    "concept": "3ce603a2-26fe-102b-80cb-0017a47871b2",
+                    "label": "PNEUMOTHORAX"
+                  },
+                  {
+                    "concept": "3cceafe0-26fe-102b-80cb-0017a47871b2",
+                    "label": "UTI retired (retired)"
+                  },
+                  {
+                    "concept": "3cd9df3c-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONVULSIONS OR NEUROLOGICAL DEFICIT PRESUMED DUE TO TUBERCULOSIS"
+                  },
+                  {
+                    "concept": "3ccdf6b8-26fe-102b-80cb-0017a47871b2",
+                    "label": "PHARYNGITIS"
+                  },
+                  {
+                    "concept": "3ccc6a00-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIARRHEA"
+                  },
+                  {
+                    "concept": "3cd4eca2-26fe-102b-80cb-0017a47871b2",
+                    "label": "GONORRHEA"
+                  },
+                  {
+                    "concept": "3ce8948c-26fe-102b-80cb-0017a47871b2",
+                    "label": "TB LYMPHADENOPATHY"
+                  },
+                  {
+                    "concept": "3ccd3b06-26fe-102b-80cb-0017a47871b2",
+                    "label": "LABOR PAIN"
+                  },
+                  {
+                    "concept": "3ccea7fc-26fe-102b-80cb-0017a47871b2",
+                    "label": "PSYCHOSIS"
+                  },
+                  {
+                    "concept": "3ccd21e8-26fe-102b-80cb-0017a47871b2",
+                    "label": "BURN"
+                  },
+                  {
+                    "concept": "3cd9bff2-26fe-102b-80cb-0017a47871b2",
+                    "label": "MYCOBACTERIUM TUBERCULOSIS, PULMONARY"
+                  },
+                  {
+                    "concept": "3cd471be-26fe-102b-80cb-0017a47871b2",
+                    "label": "PERIP NEURO"
+                  },
+                  {
+                    "concept": "3cd4e4be-26fe-102b-80cb-0017a47871b2",
+                    "label": "VITAMIN C DEFICIENCY"
+                  },
+                  {
+                    "concept": "3cce99c4-26fe-102b-80cb-0017a47871b2",
+                    "label": "PEPTIC ULCER"
+                  },
+                  {
+                    "concept": "3cea1bd6-26fe-102b-80cb-0017a47871b2",
+                    "label": "ORAL CANDIDIASIS (retired)"
+                  },
+                  {
+                    "concept": "3cd54256-26fe-102b-80cb-0017a47871b2",
+                    "label": "DERMATOPHYTOSIS"
+                  },
+                  {
+                    "concept": "3cccbd84-26fe-102b-80cb-0017a47871b2",
+                    "label": "RESPIRATORY DISEASE NOS (retired)"
+                  },
+                  {
+                    "concept": "3ce5c590-26fe-102b-80cb-0017a47871b2",
+                    "label": "ACUTE NECROTIZING ULCERATIVE STOMATITIS, GINGIVITIS, OR PERIODONTITIS"
+                  },
+                  {
+                    "concept": "3cd48924-26fe-102b-80cb-0017a47871b2",
+                    "label": "HERPES ZOSTER"
+                  },
+                  {
+                    "concept": "3cd546b6-26fe-102b-80cb-0017a47871b2",
+                    "label": "SPONDYLOSIS"
+                  },
+                  {
+                    "concept": "3ccc8602-26fe-102b-80cb-0017a47871b2",
+                    "label": "MALARIA, PRESUMED (retired)"
+                  },
+                  {
+                    "concept": "88859ecc-2fc4-40e4-8343-e92890498d9d",
+                    "label": "Cough Chronic (>15 days)"
+                  },
+                  {
+                    "concept": "3cd82dea-26fe-102b-80cb-0017a47871b2",
+                    "label": "CRYPTOCOCCOSIS"
+                  },
+                  {
+                    "concept": "3ccfb08e-26fe-102b-80cb-0017a47871b2",
+                    "label": "SYNOVITIS"
+                  },
+                  {
+                    "concept": "3ce8f184-26fe-102b-80cb-0017a47871b2",
+                    "label": "MYCOBACTERIUM TUBERCULOSIS, EXTRAPULMONARY"
+                  },
+                  {
+                    "concept": "3ccc9ee4-26fe-102b-80cb-0017a47871b2",
+                    "label": "SCURVY (retired)"
+                  },
+                  {
+                    "concept": "3ccc6636-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIARRHEA, PARASITE"
+                  },
+                  {
+                    "concept": "c412da03-4d9a-45b2-9c3f-8bc69272df3a",
+                    "label": "Eye problem Refractive Errors"
+                  },
+                  {
+                    "concept": "3cce9b54-26fe-102b-80cb-0017a47871b2",
+                    "label": "ULCER PEPTIC NOS (retired)"
+                  },
+                  {
+                    "concept": "3ccccf04-26fe-102b-80cb-0017a47871b2",
+                    "label": "UNCLASSIFIED DISEASES (retired)"
+                  },
+                  {
+                    "concept": "3ce8ecde-26fe-102b-80cb-0017a47871b2",
+                    "label": "KAPOSI SARCOMA - OLD (retired)"
+                  },
+                  {
+                    "concept": "3cce7ed0-26fe-102b-80cb-0017a47871b2",
+                    "label": "BRONCHOPNEUMONIA"
+                  },
+                  {
+                    "concept": "3ccc9340-26fe-102b-80cb-0017a47871b2",
+                    "label": "PREGNANCY"
+                  },
+                  {
+                    "concept": "3ce6b374-26fe-102b-80cb-0017a47871b2",
+                    "label": "CONGESTIVE HEART FAILURE"
+                  },
+                  {
+                    "concept": "3cd474de-26fe-102b-80cb-0017a47871b2",
+                    "label": "WASTING SYNDROME"
+                  },
+                  {
+                    "concept": "2fa8e3ce-f801-4fa1-be7d-100a54f2bcf4",
+                    "label": "Congestive Cardiac Failure"
+                  },
+                  {
+                    "concept": "3ccd13ba-26fe-102b-80cb-0017a47871b2",
+                    "label": "GINGIVITIS"
+                  },
+                  {
+                    "concept": "3ceb32b4-26fe-102b-80cb-0017a47871b2",
+                    "label": "POLIOMYELITIS"
+                  },
+                  {
+                    "concept": "3cce9e9c-26fe-102b-80cb-0017a47871b2",
+                    "label": "ULCER GASTRIC (retired)"
+                  },
+                  {
+                    "concept": "3ccc57ae-26fe-102b-80cb-0017a47871b2",
+                    "label": "BRONCHITIS, ACUTE"
+                  },
+                  {
+                    "concept": "3cd9d1f4-26fe-102b-80cb-0017a47871b2",
+                    "label": "MENINGITIS SUB-ACUTE PRESUMED CRYPTOCOCCUS"
+                  },
+                  {
+                    "concept": "3ccc97a0-26fe-102b-80cb-0017a47871b2",
+                    "label": "PREGNANCY, HYPERTENSION ASSOCIATED"
+                  },
+                  {
+                    "concept": "3cd14b24-26fe-102b-80cb-0017a47871b2",
+                    "label": "DISLOCATION"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Conclusion of exam:",
+              "type": "obs",
+              "id": "comments_at_conclusion_of_examination",
+              "questionOptions": {
+                "concept": "3cdc5938-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Treatment and comment",
+              "type": "obs",
+              "id": "patient_plan_comments",
+              "questionOptions": {
+                "concept": "3ce88a32-26fe-102b-80cb-0017a47871b2",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Prochain rendez-vous?",
+              "type": "obs",
+              "id": "return_visit_date",
+              "questionOptions": {
+                "concept": "3ce94df0-26fe-102b-80cb-0017a47871b2",
+                "rendering": "date"
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "03a36a73-ea74-4051-96b0-647e44862026"
+}

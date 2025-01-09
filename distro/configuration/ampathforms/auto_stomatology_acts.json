@@ -1,0 +1,218 @@
+{
+  "name": "Auto Stomatology Acts 2.0",
+  "description": "auto Stomatology acts",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "processor": "EncounterFormProcessor",
+  "encounter": "Stomatology acts encounter",
+  "referencedForms": [],
+  "uuid": "7fe25fb3-686b-419f-97b1-08243ef53ee5",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Particulars",
+          "isExpanded": true,
+          "questions": [
+            {
+              "value": [
+                "**This form is used to:** Start and billable dental consultation"
+              ],
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "heading"
+            },
+            {
+              "label": "Encounter & Datetime",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "datetime"
+              },
+              "required": "true",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "Date the encounter took place"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Examen de Dentition",
+      "sections": [
+        {
+          "label": "Dentition Primaire",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Examen de Dentition Primaire",
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "72037af1-1540-4ca6-a8a3-0443b1864dd7"
+              },
+              "id": "examendeDentitionPrimaire",
+              "questions": [
+                {
+                  "label": "Numero d'une dent",
+                  "id": "__H8prsHxzw",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "87cfa842-03d1-497c-8c19-4ffed300329f"
+                  },
+                  "type": "obs",
+                  "validators": []
+                },
+                {
+                  "label": "Action sur une dent",
+                  "id": "__wy03w2Jxu",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "0a24547e-36dc-426a-bb4a-fb3a93470022"
+                  },
+                  "type": "obs"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Dentition Secondaire",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Examen de Dentition Secondaire",
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "group",
+                "concept": "fe176631-0e46-4c9d-8267-94a44a4cc73b"
+              },
+              "required": "",
+              "id": "examenDeDentitionSecondaire",
+              "questions": [
+                {
+                  "label": "Numero d'une dent",
+                  "id": "__rMIMCJFrI",
+                  "questionOptions": {
+                    "rendering": "number",
+                    "concept": "87cfa842-03d1-497c-8c19-4ffed300329f"
+                  },
+                  "type": "obs"
+                },
+                {
+                  "label": "Action sur une dent",
+                  "id": "__rJqFpqGz7",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "0a24547e-36dc-426a-bb4a-fb3a93470022"
+                  },
+                  "type": "obs"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Extra Oral Exam",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Temporomandibular joint (TMJ) disorders",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "4c2292c9-6728-4235-a9a6-64a81b34bd5e",
+                "answers": [
+                  {
+                    "concept": "a6fe31ab-b3bb-40d9-b62b-016c6086937b",
+                    "label": "Strain",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "b1003b10-46bb-4c0b-ba6b-b1ed1f94cfc3",
+                    "label": "Dislocation",
+                    "conceptMappings": []
+                  }
+                ]
+              },
+              "required": "",
+              "id": "temporomandibularJointDisorders",
+              "validators": []
+            },
+            {
+              "label": "Facial Skin",
+              "type": "obs",
+              "required": false,
+              "id": "facialSkin",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "a0055c0e-eef0-457f-975b-55ce69505c9b"
+              }
+            },
+            {
+              "label": "Facial Asymmetry",
+              "type": "obs",
+              "required": false,
+              "id": "facialAsymmetry",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "db13ecb7-27de-4074-8557-29e3f9abe9f9"
+              },
+              "validators": []
+            },
+            {
+              "label": "Soft Tissue",
+              "type": "obs",
+              "required": false,
+              "id": "lymphNodes",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "ecb66fa2-212f-4a6f-9244-c4594264af27"
+              },
+              "validators": []
+            },
+            {
+              "label": "Hard Tissue",
+              "type": "obs",
+              "required": false,
+              "id": "hardTissue",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "d1c86386-3dd8-4562-877a-668aec5d2e21"
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "dd0f8dd0-e8c6-44a1-9320-174fce0022ad"
+}
