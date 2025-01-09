@@ -1,0 +1,214 @@
+{
+    "name": "Auto Kinestherapy Acts 2.0",
+    "description": "Auto kinestherapy acts",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "kinestherapy acts encounter",
+    "referencedForms": [],
+    "uuid": "719d0cef-9ffe-421f-b7de-a5713f391ab0",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**Use this form to:** Document billable phyotherapy procedures "
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Physiotherapy",
+        "sections": [
+          {
+            "label": "Procedures",
+            "isExpanded": true,
+            "questions": [
+              {
+                "label": "Physiotheraphy Assessment",
+                "type": "obs",
+                "required": false,
+                "id": "physiotheraphyAssessment",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "d54a43f2-1049-49cf-beb3-e21c4c8a2823",
+                  "answers": [
+                    {
+                      "concept": "c1d8063f-a933-4de3-83fc-a3da12018aff",
+                      "label": "Affection du systeme respiratoire"
+                    },
+                    {
+                      "concept": "62c43390-aa85-4350-980f-e5d210d2e7f8",
+                      "label": "Orthopedique"
+                    },
+                    {
+                      "concept": "b465d7f2-24ec-4dfb-befd-6b0b28e4d4f3",
+                      "label": "Rhumatisme"
+                    },
+                    {
+                      "concept": "c5076a80-3e0a-4641-aa96-100a69838b63",
+                      "label": "Systeme Nerveux Central"
+                    },
+                    {
+                      "concept": "29395609-3205-4e90-9643-ec818d6e621c",
+                      "label": "Systeme Nerveux Peripherique"
+                    },
+                    {
+                      "concept": "a616d68b-749a-49e0-af17-93a9947920a1",
+                      "label": "Traumatique"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Working Environment",
+                "type": "obs",
+                "required": false,
+                "id": "workingEnvironment",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "32e98cd7-7eb7-4da4-9c2d-6bd99f572ecb"
+                },
+                "validators": []
+              },
+              {
+                "label": "Dizziness",
+                "type": "obs",
+                "required": false,
+                "id": "dizziness",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "f8df890b-3e19-4a5c-9fbc-8d1bf44a49b1",
+                  "answers": [
+                    {
+                      "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                      "label": "Yes"
+                    },
+                    {
+                      "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                      "label": "No"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Aggravating Factors",
+                "type": "obs",
+                "required": false,
+                "id": "aggravatingFactors",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "a20c19a1-007c-456f-a805-6fe9e1ec19d3"
+                },
+                "validators": []
+              },
+              {
+                "label": "Releasing Factors",
+                "type": "obs",
+                "required": false,
+                "id": "releazingFactors",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "1a207968-710f-4768-ae0f-c6059940f027"
+                },
+                "validators": []
+              },
+              {
+                "label": "Joint Status (Range of Motion)",
+                "type": "obs",
+                "required": false,
+                "id": "jointStatus",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "a1635ebe-6d06-4a7c-841c-75156bd72d2b"
+                },
+                "validators": []
+              },
+              {
+                "label": " Sensation (Palpation)",
+                "type": "obs",
+                "required": false,
+                "id": "Sensation",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "791d7b76-169e-4979-a386-ed30cabf1e61",
+                  "answers": [
+                    {
+                      "concept": "4b994956-acd7-44f4-9733-224bf6027f14",
+                      "label": "Sensation (Palpation) deep"
+                    },
+                    {
+                      "concept": "64e24208-3238-4041-8e82-13a1cbe7850b",
+                      "label": "Sensation (Palpation) Superficial"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": " Muscle status",
+                "type": "obs",
+                "required": false,
+                "id": "MuscleStatus",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "7f561e35-35f9-4b76-9200-d264451bafc8"
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "d8739592-adc2-4898-8eba-a396daa4d88c"
+  }

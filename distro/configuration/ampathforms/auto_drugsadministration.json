@@ -1,0 +1,176 @@
+{
+    "name": "Auto Drug administration 2.0",
+    "description": "Drug administration",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "Drug administration",
+    "referencedForms": [],
+    "uuid": "8be45ce6-5c0b-4670-9fc6-15be221b6b91",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**Use this form to:** Document a prescription, _for more than one drug click on the add button_"
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Liste des Medicaments/ Medication List",
+        "sections": [
+          {
+            "label": "Drug Administration",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Drug Administration",
+                "type": "obsGroup",
+                "required": false,
+                "id": "nursingDrugAdministration",
+                "questionOptions": {
+                  "rendering": "repeating",
+                  "concept": "f1c30c00-d794-4475-ae03-295a3d94764f"
+                },
+                "validators": [],
+                "hide": {},
+                "questions": [
+                  {
+                    "label": "Drug",
+                    "type": "obs",
+                    "required": false,
+                    "id": "GeneralDrugFrequency",
+                    "questionOptions": {
+                      "rendering": "text",
+                      "concept": "5e152a81-8635-41d6-aef2-2527a5f584f3"
+                    },
+                    "validators": []
+                  },
+                  {
+                    "label": "frequency",
+                    "type": "obs",
+                    "required": false,
+                    "id": "frequencyOfSupport",
+                    "questionOptions": {
+                      "rendering": "text",
+                      "concept": "2ebd3f49-f4cc-4dc9-b5bc-cb71fec8e3ff"
+                    },
+                    "validators": []
+                  },
+                  {
+                    "label": "Method Of Drug Administration",
+                    "type": "obs",
+                    "id": "method_of_drug_administration",
+                    "questionOptions": {
+                      "concept": "1e0eaaf0-3452-4bbf-8f05-420751d719d8",
+                      "rendering": "select",
+                      "answers": [
+                        {
+                          "concept": "c527d680-a82f-47af-9fd2-cd85df601a22",
+                          "label": "External Application"
+                        },
+                        {
+                          "concept": "9ba9ecd4-60be-4a87-9431-c738a55dd84c",
+                          "label": "Inhalation"
+                        },
+                        {
+                          "concept": "a4755976-74f1-4223-912c-9081ee8b112f",
+                          "label": "Intradermal"
+                        },
+                        {
+                          "concept": "04daa0d6-c209-4156-a003-1a1b3663b71e",
+                          "label": "Intramuscular"
+                        },
+                        {
+                          "concept": "304da4df-f376-4a3f-ba70-c9fbc8fe8fa6",
+                          "label": "Intravenous"
+                        },
+                        {
+                          "concept": "455939fc-aa91-453d-a49e-72a5cc1776f8",
+                          "label": "Intrarectal"
+                        },
+                        {
+                          "concept": "7f4df66a-bca0-4d4a-93ab-8e20fba5fdb9",
+                          "label": "Intravaginal"
+                        },
+                        {
+                          "concept": "56eea1cf-4757-4348-a06a-aff7e112c006",
+                          "label": "Local-Tropical"
+                        },
+                        {
+                          "concept": "46aaaca8-1f21-410a-aac9-67bfcc1fd577",
+                          "label": "Oral"
+                        },
+                        {
+                          "concept": "18c72eae-6537-4f2f-84e2-6a7c377ab880",
+                          "label": "Spray"
+                        },
+                        {
+                          "concept": "223b1a5d-563d-430b-bfcd-90e766e95cf0",
+                          "label": "Subcutaneous"
+                        },
+                        {
+                          "concept": "2e4536dd-cf7c-489a-9118-7f6307e7c11a",
+                          "label": "Sublingual"
+                        }
+                      ]
+                    }
+                  }
+                  
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "46212022-c447-462f-a85e-65f8d6fac788"
+  }

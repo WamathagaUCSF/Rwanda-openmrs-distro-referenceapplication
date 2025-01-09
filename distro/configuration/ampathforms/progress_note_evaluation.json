@@ -1,0 +1,210 @@
+{
+    "name": "Progress Note and Evolution 2.0",
+    "description": "Progress note and evolution",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "Vitals",
+    "referencedForms": [],
+    "uuid": "5ad71922-1645-48e3-a594-36aecab8d0e3",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**Use this form to:** document patient changes and progress during hospitalization or while under medical care."
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Progress Notes",
+        "sections": [
+          {
+            "label": "Notes",
+            "isExpanded": true,
+            "questions": [
+              {
+                "label": "Clincal Department",
+                "type": "obs",
+                "id": "Department",
+                "required": "true",
+                "questionOptions": {
+                  "concept": "9b42e3b9-c648-4025-95db-8b72757e57d1",
+                  "rendering": "select",
+                  "answers": [
+                    {
+                      "concept": "adeb8d27-726c-442d-ba3c-521514f9913c",
+                      "label": "Anesthesie"
+                    },
+                    {
+                      "concept": "3cd0032c-26fe-102b-80cb-0017a47871b2",
+                      "label": "ARV"
+                    },
+                    {
+                      "concept": "c3eea300-843a-4b09-b5ae-a760019d3a1e",
+                      "label": "Chirurgie"
+                    },
+                    {
+                      "concept": "9ffaf0b6-09a2-4f5f-a934-ac6c698b8f66",
+                      "label": "Dermatologie"
+                    },
+                    {
+                      "concept": "d47c7282-cd6c-4c25-8ad7-1a93333553a8",
+                      "label": "DCP"
+                    },
+                    {
+                      "concept": "1b9d950f-cf58-4c4a-a303-a04a6d568d5e",
+                      "label": "Echographie"
+                    },
+                    {
+                      "concept": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+                      "label": "Emergency"
+                    },
+                    {
+                      "concept": "9f14056d-f58d-4e60-8d5f-c944a990ea9e",
+                      "label": "GBV"
+                    },
+                    {
+                      "concept": "75dc6a31-e5c5-4490-92a4-907cb8374f68",
+                      "label": "Laboratory"
+                    },
+                    {
+                      "concept": "2c143158-4444-4c8a-b9bc-dea6e9acc09e",
+                      "label": "Maternite"
+                    },
+                    {
+                      "concept": "11b815b5-1b1e-480b-ab2b-1f76051a2815",
+                      "label": "Medecine Interne"
+                    },
+                    {
+                      "concept": "dfba0519-dbf3-4c55-bb9d-2a929c801f72",
+                      "label": "Neonatologie"
+                    },
+                    {
+                      "concept": "3274bc44-60cb-444b-b6b1-0bfe6c68d89d",
+                      "label": "NCDs"
+                    },
+                    {
+                      "concept": "0b9ec1eb-49ca-48dc-9aa6-63366b2104b3",
+                      "label": "Nutrition"
+                    },
+                    {
+                      "concept": "3b3946c4-32e3-4db7-b6f3-0ec8c52c6585",
+                      "label": "Orthopedie"
+                    },
+                    {
+                      "concept": "f6dc88e5-a536-45fb-a343-8b76c9abe834",
+                      "label": "Pediatrie"
+                    },
+                    {
+                      "concept": "09c7bdef-116f-4143-a58b-452799d51032",
+                      "label": "Pharmacy"
+                    },
+                    {
+                      "concept": "f568dae5-2b47-4fb3-b823-e438e347cb00",
+                      "label": "Physiotherapy"
+                    },
+                    {
+                      "concept": "c2009d50-0ce9-4b73-9908-6de79d9b2f2e",
+                      "label": "Ophtalmology"
+                    },
+                    {
+                      "concept": "9e5e7ffc-6eb8-4d0f-a1a8-319eed6399fb",
+                      "label": "OPD"
+                    },
+                    {
+                      "concept": "1defceb5-def5-4b4e-bd7f-0d79c601169b",
+                      "label": "OPD Chirurgie"
+                    },
+                    {
+                      "concept": "1f83cbb7-3e94-41d4-a721-6a1b5a3ee6a1",
+                      "label": "Radiology"
+                    },
+                    {
+                      "concept": "dd67f196-d0bf-4323-9e08-822fe4138b8b",
+                      "label": "Sante Mentale"
+                    },
+                    {
+                      "concept": "e65de509-f9dc-4219-bba2-129e6dd65d01",
+                      "label": "Stomatologie"
+                    },
+                    {
+                      "concept": "4ba40ee0-8328-4895-8bab-912a7055aabb",
+                      "label": "TBMR"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Date",
+                "type": "obs",
+                "id": "nursing_plan_time",
+                "questionOptions": {
+                  "concept": "91f417a4-2942-4f7c-90de-70ca5a135f79",
+                  "rendering": "datetime"
+                }
+              },
+              {
+                "label": "Progress notes, Investigation & Rx",
+                "type": "obs",
+                "id": "progress_notes",
+                "questionOptions": {
+                  "concept": "6a329c3c-b15f-418d-b3d6-74e9b95b5d85",
+                  "rendering": "textarea"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+      "encounterType": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd"
+  }
